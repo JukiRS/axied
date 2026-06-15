@@ -2,7 +2,7 @@ name: Build and Deploy Wiki
 
 on:
   push:
-    branches: [ main ]  # Сборка при пуше в ветку main
+    branches: [ main ]
 
 jobs:
   build:
@@ -11,15 +11,23 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Get list of Markdown files
+        run: |
+          # Устанавливаем модуль fs (обычно уже есть, но на всякий случай)
+          npm install fs
+          # Запускаем наш скрипт и сохраняем результат в переменную
+          FILES=\$(node get-md-files.js)
+          echo "FILES=$FILES" >> $GITHUB_ENV
+
       - name: Convert Markdown to HTML
         uses: natescherer/markdown-to-html-with-github-style-action@v1.1.0
         with:
-          path: 'docs/**/*.md'  # Конвертировать все .md в папке docs
-          outputpath: 'docs'   # Сохранять HTML в ту же папку docs
+          path: \${{ env.FILES }}
+          outputpath: docs
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: \${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs  # Папка, которую нужно выложить (где лежат HTML)
-          force_orphan: true   # Важно для перезаписи истории
+          publish_dir: ./docs
+          force_orphan: true
