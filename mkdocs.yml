@@ -1,0 +1,114 @@
+site_name: Bonsai House
+site_description: Википедия ванилла++ сервера Bonsai House — механики, крафты, зачарования и правила.
+site_author: Bonsai House
+site_url: https://JukiRS.github.io/bonsaihouse/
+
+docs_dir: docs
+copyright: Bonsai House Wiki
+
+theme:
+  name: material
+  language: ru
+  logo: assets/images/logo.png
+  favicon: assets/images/logo.png
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Manrope
+    code: JetBrains Mono
+  palette:
+    - scheme: slate
+      primary: custom
+      accent: custom
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tooltips
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/JukiRS/bonsaihouse
+      name: GitHub
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+      permalink_title: Ссылка на раздел
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tilde
+  - pymdownx.caret
+  - pymdownx.mark
+
+plugins:
+  - search:
+      lang:
+        - ru
+        - en
+
+nav:
+  - Главная: index.md
+  - Генерация мира:
+      - world-generation/overworld.md
+      - world-generation/nether.md
+      - world-generation/end.md
+  - Передвижение:
+      - movement/mount-summoning.md
+      - movement/swift-ghasts.md
+      - movement/ropes-ziplines.md
+      - movement/return-potion.md
+  - Крафты:
+      - crafting/improved-stonecutter.md
+      - crafting/new-crafts.md
+      - crafting/cauldron-upgrade.md
+      - crafting/uncompression.md
+      - crafting/coral-crafting.md
+      - crafting/end-crystal-craft.md
+      - crafting/miner-potion.md
+  - Зачарования:
+      - enchantments/enchantment-levels.md
+      - enchantments/armor-effects.md
+  - Ресурспаки:
+      - resource-packs/weapon-skins.md
+      - resource-packs/kseps.md
+  - Разное:
+      - misc/spawner-upgrader.md
+      - misc/totem-of-immortality.md
+      - misc/item-signing.md
+      - misc/armorer-trading.md
+      - misc/custom-music.md
+      - misc/emotecraft-patpat.md
+  - Правила:
+      - rules/general-rules.md
