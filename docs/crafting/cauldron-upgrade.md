@@ -13,5 +13,5 @@
 ---
 
 **Смотрите также:**
-* [Улучшенный камнерез](improved-stonecutter)
+* [Улучшенный камнерез](improved-stonecutter.md)
 * [Новые крафты](new-crafts.md)

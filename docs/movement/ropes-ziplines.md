@@ -34,8 +34,6 @@
 
 Подробнее: [Catenary Datapack](https://modrinth.com/datapack/catenary)
 
-![Зиплайн](assets/images/zipline.png)
-
 ---
 
 **Смотрите также:**
