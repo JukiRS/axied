@@ -14,11 +14,9 @@
 
 🌌 Измерение полностью переработано датапаком Stellarity. Подробнее: [Stellarity](https://modrinth.com/datapack/stellarity)
 
-
-> **Внимание:** Край стал гораздо опаснее и интереснее!
-
 ---
 
 **Смотрите также:**
+
 * [The Overworld](overworld.md)
 * [The Nether](nether.md)

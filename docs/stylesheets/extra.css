@@ -398,3 +398,154 @@ body {
   .bh-hero { padding: 2.4rem 1rem; }
   .bh-hero h1 { font-size: 1.9rem; }
 }
+
+/* ============================================================
+   Верхняя панель (announce) с соц-пилюлями
+   ============================================================ */
+.md-banner {
+  background: linear-gradient(90deg, #081210, #0c1a15 50%, #081210);
+  border-bottom: 1px solid var(--bonsai-border);
+  color: var(--md-default-fg-color);
+}
+.md-banner__inner {
+  margin: 0.35rem auto;
+  font-size: 0.7rem;
+}
+.md-banner__button { display: none; }
+.bh-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.bh-topbar-ip {
+  font-weight: 600;
+  color: rgba(232, 245, 240, 0.85);
+}
+.bh-topbar-ip code {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid var(--bonsai-border);
+  color: var(--bonsai-mint);
+  padding: 0.05rem 0.4rem;
+  border-radius: 6px;
+}
+.bh-topbar-links { display: flex; gap: 0.45rem; flex-wrap: wrap; }
+.bh-pill {
+  display: inline-block;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 999px;
+  color: var(--bonsai-mint) !important;
+  border: 1px solid var(--bonsai-border);
+  background: rgba(16, 185, 129, 0.08);
+  text-decoration: none;
+  transition: transform 0.12s, background 0.18s, color 0.18s, box-shadow 0.18s;
+}
+.bh-pill:hover {
+  transform: translateY(-1px);
+  background: var(--bonsai-emerald);
+  color: #04110c !important;
+  box-shadow: 0 4px 14px var(--bonsai-glow);
+}
+.bh-pill--discord {
+  color: #c7d2fe !important;
+  border-color: rgba(99, 102, 241, 0.4);
+  background: rgba(99, 102, 241, 0.12);
+}
+.bh-pill--discord:hover { background: #5865f2; color: #fff !important; box-shadow: 0 4px 14px rgba(88,101,242,0.4); }
+.bh-pill--tiktok {
+  color: #f5f5f5 !important;
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+}
+.bh-pill--tiktok:hover { background: #fe2c55; color: #fff !important; box-shadow: 0 4px 14px rgba(254,44,85,0.4); }
+
+@media (max-width: 600px) {
+  .md-banner__inner { font-size: 0.64rem; }
+  .bh-pill { padding: 0.18rem 0.55rem; }
+}
+
+/* ---- GitBook-подобные уточнения ---- */
+.md-main__inner { margin-top: 1.2rem; }
+.md-content__inner { padding-top: 0.6rem; }
+.md-sidebar--primary { padding-top: 0.4rem; }
+.md-typeset .headerlink { opacity: 0; transition: opacity 0.15s; }
+.md-typeset h2:hover .headerlink, .md-typeset h3:hover .headerlink { opacity: 1; }
+
+/* ---- Шапка: логотип + название «BONSAI HOUSE · 3 СЕЗОН» ---- */
+.md-header__title {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+}
+/* Показывать логотип в шапке на всех экранах */
+.md-header__button.md-logo {
+  display: inline-flex !important;
+  align-items: center;
+  padding: 0.2rem 0.2rem 0.2rem 0;
+  margin-right: 0.1rem;
+}
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 1.7rem;
+  width: auto;
+  filter: drop-shadow(0 0 6px var(--bonsai-glow));
+}
+
+/* ============================================================
+   Боковое меню в стиле GitBook (группы-заголовки + иконки)
+   ============================================================ */
+/* Заголовок «BONSAI HOUSE» над меню */
+.md-nav--primary > .md-nav__title {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 800;
+  color: var(--bonsai-mint);
+  opacity: 0.85;
+  box-shadow: none;
+  background: transparent;
+}
+
+/* Группы верхнего уровня = заголовки разделов */
+.md-nav--primary .md-nav__item--section {
+  margin-top: 1.1rem;
+}
+.md-nav--primary .md-nav__item--section > .md-nav__link {
+  font-size: 0.72rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  font-weight: 800;
+  color: var(--md-default-fg-color--light) !important;
+  opacity: 0.75;
+  cursor: default;
+  pointer-events: none;
+  margin-bottom: 0.2rem;
+}
+
+/* Пункты меню */
+.md-nav--primary .md-nav__link {
+  border-radius: 8px;
+  padding: 0.36rem 0.6rem;
+  margin: 0.08rem 0;
+  font-size: 0.78rem;
+  transition: background 0.15s, color 0.15s, padding 0.15s;
+}
+.md-nav--primary .md-nav__item .md-nav__link:hover {
+  background: rgba(16, 185, 129, 0.09);
+  color: var(--bonsai-mint);
+}
+/* Активный пункт — зелёная подсветка с полоской слева (как GitBook) */
+.md-nav--primary .md-nav__link--active,
+.md-nav--primary .md-nav__item .md-nav__link--active {
+  background: rgba(16, 185, 129, 0.14);
+  color: var(--bonsai-mint) !important;
+  font-weight: 700;
+  box-shadow: inset 3px 0 0 var(--bonsai-emerald);
+}
+
+/* Скрыть стрелки-«шевроны» сворачивания (меню всегда раскрыто) */
+.md-nav--primary .md-nav__item--section > .md-nav__link .md-nav__icon,
+.md-nav--primary .md-nav__icon { display: none; }

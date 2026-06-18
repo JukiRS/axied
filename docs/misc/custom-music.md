@@ -11,14 +11,12 @@
 
 ## Воспроизведение
 
-
 Поместите пластинку в проигрыватель.
 
 Ссылка на SoundCloud: [soundcloud.com](https://soundcloud.com)
 
-> **Совет:** Делитесь любимыми треками с друзьями!
-
 ---
 
 **Смотрите также:**
+
 * [Emotecraft и PatPat](emotecraft-patpat.md)

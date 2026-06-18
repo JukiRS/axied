@@ -8,8 +8,6 @@ hide:
 
 <img src="assets/images/logo.png" alt="Bonsai House" class="bh-hero-logo">
 
-<span class="bh-badge">Ванилла++ сервер</span>
-
 # Bonsai House Wiki
 
 <p class="bh-sub">
@@ -17,14 +15,27 @@ hide:
 Всё, что нужно знать игроку — в одном месте.
 </p>
 
-[Начать с правил](rules/general-rules.md){ .md-button .md-button--primary }
-[Механики передвижения](movement/mount-summoning.md){ .md-button }
+[Информация о сервере](info/server-info.md){ .md-button .md-button--primary }
+[Discord](https://discord.gg/Snaqmue5zH){ .md-button }
+[TikTok](https://www.tiktok.com/@r0o0mbik){ .md-button }
 
 </div>
 
 ## Разделы вики
 
 <div class="bh-grid" markdown>
+
+<a class="bh-card" href="info/server-info/">
+<span class="bh-card-icon">🌳</span>
+<span class="bh-card-title">Информация о сервере</span>
+<span class="bh-card-desc">Версия, IP-адреса, перезапуски и голосовой чат.</span>
+</a>
+
+<a class="bh-card" href="info/currency/">
+<span class="bh-card-icon">🍃</span>
+<span class="bh-card-title">Валюта — Листочки</span>
+<span class="bh-card-desc">Листочки вместо алмазов, обмен и банк.</span>
+</a>
 
 <a class="bh-card" href="world-generation/overworld/">
 <span class="bh-card-icon">🌍</span>
@@ -56,16 +67,10 @@ hide:
 <span class="bh-card-desc">Скины оружия и набор KSEPSP через переименование.</span>
 </a>
 
-<a class="bh-card" href="misc/totem-of-immortality/">
-<span class="bh-card-icon">✨</span>
-<span class="bh-card-title">Разное</span>
-<span class="bh-card-desc">Тотемы, спавнеры, музыка, эмоции и торговля.</span>
-</a>
-
 <a class="bh-card" href="rules/general-rules/">
 <span class="bh-card-icon">📜</span>
 <span class="bh-card-title">Правила сервера</span>
-<span class="bh-card-desc">Запреты, наказания и контакты администрации.</span>
+<span class="bh-card-desc">Чат, игровой процесс, экономика и наказания.</span>
 </a>
 
 </div>
@@ -73,8 +78,8 @@ hide:
 ## Быстрый старт
 
 <ol class="bh-steps" markdown>
-<li markdown>Ознакомьтесь с [правилами сервера](rules/general-rules.md).</li>
-<li markdown>Изучите механику [призыва маунта](movement/mount-summoning.md).</li>
-<li markdown>Попробуйте создать [канат и зиплайн](movement/ropes-ziplines.md).</li>
-<li markdown>Освойте [улучшенный камнерез](crafting/improved-stonecutter.md).</li>
+<li markdown>Зайдите на сервер: `bonsai.vanilla.house` (версия **Java 1.21.11**).</li>
+<li markdown>Ознакомьтесь с [правилами сервера](rules/general-rules.md) и напишите ник в WhiteList.</li>
+<li markdown>Узнайте про [валюту — листочки](info/currency.md).</li>
+<li markdown>Изучите [механики передвижения](movement/mount-summoning.md) и [крафты](crafting/improved-stonecutter.md).</li>
 </ol>

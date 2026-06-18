@@ -1,4 +1,4 @@
-site_name: Bonsai House
+site_name: Bonsai House · 3 сезон
 site_description: Википедия ванилла++ сервера Bonsai House — механики, крафты, зачарования и правила.
 site_author: Bonsai House
 site_url: https://JukiRS.github.io/bonsaihouse/
@@ -9,6 +9,7 @@ copyright: Bonsai House Wiki
 theme:
   name: material
   language: ru
+  custom_dir: overrides
   logo: assets/images/logo.png
   favicon: assets/images/logo.png
   icon:
@@ -24,9 +25,8 @@ theme:
     - navigation.instant
     - navigation.instant.progress
     - navigation.tracking
-    - navigation.tabs
-    - navigation.tabs.sticky
     - navigation.sections
+    - navigation.expand
     - navigation.top
     - navigation.indexes
     - navigation.footer
@@ -40,6 +40,12 @@ theme:
 extra:
   generator: false
   social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/Snaqmue5zH
+      name: Discord
+    - icon: fontawesome/brands/tiktok
+      link: https://www.tiktok.com/@r0o0mbik
+      name: TikTok
     - icon: fontawesome/brands/github
       link: https://github.com/JukiRS/bonsaihouse
       name: GitHub
@@ -79,36 +85,39 @@ plugins:
         - en
 
 nav:
-  - Главная: index.md
-  - Генерация мира:
-      - world-generation/overworld.md
-      - world-generation/nether.md
-      - world-generation/end.md
-  - Передвижение:
-      - movement/mount-summoning.md
-      - movement/swift-ghasts.md
-      - movement/ropes-ziplines.md
-      - movement/return-potion.md
-  - Крафты:
-      - crafting/improved-stonecutter.md
-      - crafting/new-crafts.md
-      - crafting/cauldron-upgrade.md
-      - crafting/uncompression.md
-      - crafting/coral-crafting.md
-      - crafting/end-crystal-craft.md
-      - crafting/miner-potion.md
-  - Зачарования:
-      - enchantments/enchantment-levels.md
-      - enchantments/armor-effects.md
-  - Ресурспаки:
-      - resource-packs/weapon-skins.md
-      - resource-packs/kseps.md
-  - Разное:
-      - misc/spawner-upgrader.md
-      - misc/totem-of-immortality.md
-      - misc/item-signing.md
-      - misc/armorer-trading.md
-      - misc/custom-music.md
-      - misc/emotecraft-patpat.md
-  - Правила:
-      - rules/general-rules.md
+  - 🏠 Главная: index.md
+  - ℹ️ Информация:
+      - 🌳 О сервере: info/server-info.md
+      - 🍃 Валюта — Листочки: info/currency.md
+  - 🗺️ Генерация мира:
+      - 🌍 Оверворлд: world-generation/overworld.md
+      - 🔥 Нижний мир: world-generation/nether.md
+      - 🌌 Энд: world-generation/end.md
+  - 🏃 Передвижение:
+      - 🐎 Призыв маунта: movement/mount-summoning.md
+      - 💨 Быстрые гасты: movement/swift-ghasts.md
+      - 🪢 Канаты и зиплайны: movement/ropes-ziplines.md
+      - 🧪 Зелье Возврата: movement/return-potion.md
+  - ⚒️ Крафты:
+      - 🪨 Улучшенный камнерез: crafting/improved-stonecutter.md
+      - 🛠️ Новые крафты: crafting/new-crafts.md
+      - 🫖 Улучшение котла: crafting/cauldron-upgrade.md
+      - 🔄 Разжатие блоков: crafting/uncompression.md
+      - 🌊 Кораллы: crafting/coral-crafting.md
+      - ✨ Кристалл Края: crafting/end-crystal-craft.md
+      - ⛏️ Зелье шахтёра: crafting/miner-potion.md
+  - ⚡ Зачарования:
+      - 📖 Усиление чар: enchantments/enchantment-levels.md
+      - 🛡️ Эффекты брони: enchantments/armor-effects.md
+  - 🎨 Ресурспаки:
+      - 🗡️ Скины оружия: resource-packs/weapon-skins.md
+      - 🍽️ KSEPSP: resource-packs/kseps.md
+  - 🧩 Разное:
+      - ⚙️ Улучшитель спавнеров: misc/spawner-upgrader.md
+      - 💀 Тотем бессмертия: misc/totem-of-immortality.md
+      - 📝 Подписывание предметов: misc/item-signing.md
+      - 💰 Торговля с бронником: misc/armorer-trading.md
+      - 🎵 Музыка на пластинках: misc/custom-music.md
+      - 👋 Emotecraft и PatPat: misc/emotecraft-patpat.md
+  - 📜 Правила:
+      - ⚖️ Правила сервера: rules/general-rules.md
