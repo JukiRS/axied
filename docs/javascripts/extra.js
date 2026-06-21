@@ -53,17 +53,27 @@
     // Принудительный reflow, чтобы стартовое состояние (opacity:0) отрисовалось
     void document.body.offsetHeight;
 
+    // показать элемент и затем убрать классы анимации,
+    // чтобы они не мешали hover-эффектам (например, у карточек админов)
+    function show(el) {
+      if (el.dataset.bhShown) return;
+      el.dataset.bhShown = '1';
+      el.classList.add('bh-in');
+      setTimeout(function () {
+        el.classList.remove('bh-reveal', 'bh-in');
+        el.style.transitionDelay = '';
+      }, 1500);
+    }
+
     if (!('IntersectionObserver' in window)) {
-      requestAnimationFrame(function () {
-        targets.forEach(function (el) { el.classList.add('bh-in'); });
-      });
+      requestAnimationFrame(function () { targets.forEach(show); });
       return;
     }
 
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) {
-          e.target.classList.add('bh-in');
+          show(e.target);
           io.unobserve(e.target);
         }
       });
@@ -77,9 +87,7 @@
     });
 
     // Страховка: показать всё максимум через 3 секунды
-    setTimeout(function () {
-      targets.forEach(function (el) { el.classList.add('bh-in'); });
-    }, 3000);
+    setTimeout(function () { targets.forEach(show); }, 3000);
   }
 
   if (window.document$ && typeof window.document$.subscribe === 'function') {
