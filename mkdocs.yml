@@ -120,6 +120,7 @@ nav:
   - 🧩 Моды: mods/mods.md
   - 🗃️ Разное:
       - ☀️ Аномально жаркий день: misc/hot-day.md
+      - 🔒 Блокировка шаблонов: misc/template-lock.md
       - ⚙️ Улучшитель спавнеров: misc/spawner-upgrader.md
       - 💀 Тотем бессмертия: misc/totem-of-immortality.md
       - 📝 Подписывание предметов: misc/item-signing.md
