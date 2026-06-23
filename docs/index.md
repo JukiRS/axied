@@ -18,8 +18,7 @@ hide:
 </p>
 
 [Информация о сервере](info/server-info.md){ .md-button .md-button--primary }
-[Discord](https://discord.gg/Snaqmue5zH){ .md-button }
-[TikTok](https://www.tiktok.com/@r0o0mbik){ .md-button }
+[🗺️ Онлайн карта](http://map.bonsaihouse.ru:25587){ .md-button }
 
 </div>
 
