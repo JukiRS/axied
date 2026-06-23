@@ -41,10 +41,17 @@ hide:
 <span class="bh-staff-role">Зам. Владельца</span>
 </div>
 
-<div class="bh-staff bh-staff--techadmin">
+<div class="bh-staff bh-staff--seniortech">
 <img class="bh-staff-skin" src="assets/images/staff/Ducki4.png" alt="Ducki4" loading="lazy">
 <span class="bh-staff-nick">Ducki4</span>
 <span class="bh-staff-name">Дакич</span>
+<span class="bh-staff-role">Ст. тех. админ</span>
+</div>
+
+<div class="bh-staff bh-staff--techadmin">
+<img class="bh-staff-skin" src="assets/images/staff/NovyMony.png" alt="NovyMony" loading="lazy">
+<span class="bh-staff-nick">NovyMony</span>
+<span class="bh-staff-name">Нови</span>
 <span class="bh-staff-role">Тех. админ</span>
 </div>
 

@@ -471,6 +471,7 @@ body {
 /* Цвета должностей */
 .bh-staff--owner     { --role: #38bdf8; } /* Владелец — голубой */
 .bh-staff--deputy    { --role: #f472b6; } /* Заместитель владельца — розовый */
+.bh-staff--seniortech { --role: #3b82f6; } /* Ст. тех. админ — синий */
 .bh-staff--techadmin { --role: #86efac; } /* Тех. админ — светло-зелёный */
 .bh-staff--admin     { --role: #ef4444; } /* Админ — красный */
 .bh-staff--moderator { --role: #3b82f6; } /* Модератор — синий */
