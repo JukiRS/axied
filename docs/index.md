@@ -48,9 +48,9 @@ hide:
 </div>
 
 <div class="bh-staff bh-staff--techadmin">
-<img class="bh-staff-skin" src="assets/images/staff/NovyMony.png" alt="NovyMony" loading="lazy">
-<span class="bh-staff-nick">NovyMony</span>
-<span class="bh-staff-name">Нови</span>
+<img class="bh-staff-skin" src="assets/images/staff/Last_Seraphim.png" alt="Last_Seraphim" loading="lazy">
+<span class="bh-staff-nick">Last_Seraphim</span>
+<span class="bh-staff-name">Ваня</span>
 <span class="bh-staff-role">Тех. админ</span>
 </div>
 
