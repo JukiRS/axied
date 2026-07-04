@@ -50,6 +50,7 @@
 * NightVision
 * Neat
 * Accurate Block Placement
+* Feather Client
 
 *Список может пополняться!*
 
