@@ -10,7 +10,7 @@ hide:
 
 <span class="bh-badge">Axied Project</span>
 
-#  Axied Project
+# Axied Project
 
 <p class="bh-sub">
 Полный гайд по механикам, крафтам, зачарованиям и особенностям сервера.
@@ -18,7 +18,7 @@ hide:
 </p>
 
 [Информация о сервере](info/server-info.md){ .md-button .md-button--primary }
-[🛒 Магазин](https://axied.easydonate.ru/){ .md-button }
+[🛒 Магазин](https://shop.axied.ru/){ .md-button }
 
 </div>
 
@@ -47,5 +47,5 @@ hide:
 <ol class="bh-steps" markdown>
 <li markdown>Зайдите на сервер: `mc.axied.ru` (версия **Java 1.21.11**).</li>
 <li markdown>Изучите [механики передвижения](movement/mount-summoning.md) и [крафты](crafting/improved-stonecutter.md).</li>
-<li markdown>Загляните в [магазин](https://axied.easydonate.ru/).</li>
+<li markdown>Загляните в [магазин](https://shop.axied.ru/).</li>
 </ol>

@@ -11,7 +11,7 @@
 
 ## Наши площадки
 
-* 🛒 [Магазин](https://axied.easydonate.ru/)
+* 🛒 [Магазин](https://shop.axied.ru/)
 
 ---
 
