@@ -10,7 +10,7 @@ hide:
 
 <span class="bh-badge">Axied Project</span>
 
-# Axied
+# Axied Project
 
 <p class="bh-sub">
 Полный гайд по механикам, крафтам, зачарованиям и особенностям сервера.

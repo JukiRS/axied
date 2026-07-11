@@ -5,7 +5,13 @@ site_url: https://wiki.axied.ru/
 
 docs_dir: docs
 not_in_nav: |
-  /rules/general-rules.md
+  /**
+  !/index.md
+  !/info/server-info.md
+  !/info/currency.md
+  !/crafting/miner-potion.md
+  !/misc/template-lock.md
+  !/misc/item-signing.md
 copyright: '© 2026 Axied Project — Все права защищены. Axied не связан с Mojang AB<br>Создатель: Соковец Григорий Юрьевич'
 
 theme:
@@ -20,7 +26,7 @@ theme:
     text: Manrope
     code: JetBrains Mono
   palette:
-    - scheme: default
+    - scheme: slate
       primary: custom
       accent: custom
   features:
@@ -42,15 +48,21 @@ theme:
 extra:
   generator: false
   social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/J5ADg5FeKG
+      name: Discord
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/+tbA1DkmZ77VjZmNi
+      name: Telegram
     - icon: fontawesome/solid/cart-shopping
       link: https://axied.easydonate.ru/
       name: Магазин
 
 extra_css:
-  - stylesheets/extra.css?v=20260711
+  - stylesheets/extra.css?v=20260711b
 
 extra_javascript:
-  - javascripts/extra.js?v=20260711
+  - javascripts/extra.js?v=20260711b
 
 markdown_extensions:
   - admonition
@@ -88,47 +100,6 @@ nav:
   - ℹ️ Информация:
       - 🌳 О сервере: info/server-info.md
       - 🍃 Валюта — Листочки: info/currency.md
-  - 🗺️ Генерация мира:
-      - 🌍 Оверворлд: world-generation/overworld.md
-      - 🔥 Нижний мир: world-generation/nether.md
-      - 🌌 Энд: world-generation/end.md
-  - 🏃 Передвижение:
-      - 🐎 Призыв маунта: movement/mount-summoning.md
-      - 💨 Быстрые гасты: movement/swift-ghasts.md
-      - 🧵 Канаты и зиплайны: movement/ropes-ziplines.md
-      - 🧪 Зелье Возврата: movement/return-potion.md
-  - ⚒️ Крафты:
-      - 🧱 Улучшенный камнерез: crafting/improved-stonecutter.md
-      - 🛠️ Новые крафты: crafting/new-crafts.md
-      - 🍲 Улучшение котла: crafting/cauldron-upgrade.md
-      - 🔄 Разжатие блоков: crafting/uncompression.md
-      - 🌊 Кораллы: crafting/coral-crafting.md
-      - ✨ Кристалл Края: crafting/end-crystal-craft.md
-      - 👁️ Око Эндера: crafting/ender-eye-craft.md
-      - ⛏️ Зелье шахтёра: crafting/miner-potion.md
-  - ⚡ Зачарования:
-      - 📖 Усиление чар: enchantments/enchantment-levels.md
-      - 🛡️ Эффекты брони: enchantments/armor-effects.md
-  - 🌟 Уникальные зачарования:
-      - 🌾 Фермер: unique-enchantments/farmer.md
-      - ⛏️ Землекоп: unique-enchantments/excavator.md
-      - ☀️ Защита от солнца: unique-enchantments/sun-protection.md
-      - 🗡️ Головорез: unique-enchantments/headhunter.md
-      - ☢️ Токсичная защита: unique-enchantments/toxic-protection.md
-      - 🧲 Магнит: unique-enchantments/magnet.md
-  - 🎁 Уникальные предметы:
-      - 🎩 Шляпа лета: unique-items/summer-hat.md
-  - 🎨 Ресурспаки:
-      - 📦 Обязательные ресурспаки: resource-packs/required.md
-      - 🗡️ Скины оружия: resource-packs/weapon-skins.md
-      - 🍽️ KSEPSP: resource-packs/kseps.md
-  - 🧩 Моды: mods/mods.md
-  - 🗃️ Разное:
-      - 🗺️ Онлайн карта: misc/online-map.md
-      - ☀️ Аномально жаркий день: misc/hot-day.md
-      - 🔒 Блокировка шаблонов: misc/template-lock.md
-      - ⚙️ Улучшитель спавнеров: misc/spawner-upgrader.md
-      - 💀 Тотем бессмертия: misc/totem-of-immortality.md
-      - 📝 Подписывание предметов: misc/item-signing.md
-      - 💰 Торговля с бронником: misc/armorer-trading.md
-      - 🎵 Музыка на пластинках: misc/custom-music.md
+  - ⛏️ Зелье шахтёра: crafting/miner-potion.md
+  - 🔒 Блокировка шаблонов: misc/template-lock.md
+  - 📝 Подписывание предметов: misc/item-signing.md
