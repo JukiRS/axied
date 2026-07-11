@@ -1,10 +1,12 @@
-site_name: Bonsai House · 3 сезон
-site_description: Википедия ванилла++ сервера Bonsai House — механики, крафты, зачарования и правила.
-site_author: Bonsai House
+site_name: Axied Project
+site_description: Википедия сервера Axied — механики, крафты, зачарования и особенности.
+site_author: Axied Project
 site_url: https://wiki.bonsaihouse.ru/
 
 docs_dir: docs
-copyright: '© 2026 BonsaiHouse — Все права защищены. BonsaiHouse не связан с MojangAB<br>Создатель: Соковец Григорий Юрьевич'
+not_in_nav: |
+  /rules/general-rules.md
+copyright: '© 2026 Axied Project — Все права защищены. Axied не связан с Mojang AB<br>Создатель: Соковец Григорий Юрьевич'
 
 theme:
   name: material
@@ -18,18 +20,9 @@ theme:
     text: Manrope
     code: JetBrains Mono
   palette:
-    - scheme: slate
-      primary: custom
-      accent: custom
-      toggle:
-        icon: material/weather-night
-        name: Светло-синяя тема
     - scheme: default
       primary: custom
       accent: custom
-      toggle:
-        icon: material/weather-sunny
-        name: Тёмная тема
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -49,18 +42,15 @@ theme:
 extra:
   generator: false
   social:
-    - icon: fontawesome/brands/discord
-      link: https://discord.gg/Snaqmue5zH
-      name: Discord
-    - icon: fontawesome/brands/tiktok
-      link: https://www.tiktok.com/@r0o0mbik
-      name: TikTok
+    - icon: fontawesome/solid/cart-shopping
+      link: https://axied.easydonate.ru/
+      name: Магазин
 
 extra_css:
-  - stylesheets/extra.css?v=20260623b
+  - stylesheets/extra.css?v=20260711
 
 extra_javascript:
-  - javascripts/extra.js?v=20260623b
+  - javascripts/extra.js?v=20260711
 
 markdown_extensions:
   - admonition
@@ -142,5 +132,3 @@ nav:
       - 📝 Подписывание предметов: misc/item-signing.md
       - 💰 Торговля с бронником: misc/armorer-trading.md
       - 🎵 Музыка на пластинках: misc/custom-music.md
-  - 📜 Правила:
-      - ⚖️ Правила сервера: rules/general-rules.md

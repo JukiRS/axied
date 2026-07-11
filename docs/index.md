@@ -6,11 +6,11 @@ hide:
 
 <div class="bh-hero" markdown>
 
-<img src="assets/images/logo.png" alt="Bonsai House" class="bh-hero-logo">
+<img src="assets/images/logo.png" alt="Axied" class="bh-hero-logo">
 
-<span class="bh-badge">Сезон 3</span>
+<span class="bh-badge">Axied Project</span>
 
-# Bonsai House
+# Axied
 
 <p class="bh-sub">
 Полный гайд по механикам, крафтам, зачарованиям и особенностям сервера.
@@ -18,7 +18,7 @@ hide:
 </p>
 
 [Информация о сервере](info/server-info.md){ .md-button .md-button--primary }
-[🗺️ Онлайн карта](http://map.bonsaihouse.ru:25587){ .md-button }
+[🛒 Магазин](https://axied.easydonate.ru/){ .md-button }
 
 </div>
 
@@ -26,39 +26,18 @@ hide:
 
 <div class="bh-staff-grid" markdown>
 
-<div class="bh-staff bh-staff--owner">
-<img class="bh-staff-skin" src="assets/images/staff/HogNum.png" alt="HogNum" loading="lazy">
-<span class="bh-staff-nick">HogNum</span>
-<span class="bh-staff-name">Хогнам</span>
-<span class="bh-staff-role">Владелец</span>
-</div>
-
-<div class="bh-staff bh-staff--deputy">
-<img class="bh-staff-skin" src="assets/images/staff/hamster_ivet.png" alt="hamster_ivet" loading="lazy">
-<span class="bh-staff-nick">hamster_ivet</span>
-<span class="bh-staff-name">Настя</span>
-<span class="bh-staff-role">Зам. Владельца</span>
-</div>
-
-<div class="bh-staff bh-staff--seniortech">
-<img class="bh-staff-skin" src="assets/images/staff/Ducki4.png" alt="Ducki4" loading="lazy">
-<span class="bh-staff-nick">Ducki4</span>
-<span class="bh-staff-name">Дакич</span>
-<span class="bh-staff-role">Старший тех. админ</span>
-</div>
-
-<div class="bh-staff bh-staff--techadmin">
-<img class="bh-staff-skin" src="assets/images/staff/Last_Seraphim.png" alt="Last_Seraphim" loading="lazy">
-<span class="bh-staff-nick">Last_Seraphim</span>
-<span class="bh-staff-name">Ваня</span>
-<span class="bh-staff-role">Тех. админ</span>
-</div>
-
 <div class="bh-staff bh-staff--admin">
 <img class="bh-staff-skin" src="assets/images/staff/R0MB.png" alt="R0MB" loading="lazy">
 <span class="bh-staff-nick">R0MB</span>
 <span class="bh-staff-name">Ромбик</span>
-<span class="bh-staff-role">Админ</span>
+<span class="bh-staff-role">Владелец</span>
+</div>
+
+<div class="bh-staff bh-staff--admin">
+<img class="bh-staff-skin" src="assets/images/staff/Ducki4.png" alt="Ducki4" loading="lazy">
+<span class="bh-staff-nick">Ducki4</span>
+<span class="bh-staff-name">Дакич</span>
+<span class="bh-staff-role">Владелец</span>
 </div>
 
 </div>
@@ -66,8 +45,7 @@ hide:
 ## Быстрый старт { .bh-center }
 
 <ol class="bh-steps" markdown>
-<li markdown>Зайдите на сервер: `mc.bonsaihouse.ru` (версия **Java 1.21.11**).</li>
-<li markdown>Ознакомьтесь с [правилами сервера](rules/general-rules.md) и напишите ник в WhiteList.</li>
-<li markdown>Узнайте про [валюту — листочки](info/currency.md).</li>
+<li markdown>Зайдите на сервер: `mc.axied.ru` (версия **Java 1.21.11**).</li>
 <li markdown>Изучите [механики передвижения](movement/mount-summoning.md) и [крафты](crafting/improved-stonecutter.md).</li>
+<li markdown>Загляните в [магазин](https://axied.easydonate.ru/).</li>
 </ol>
