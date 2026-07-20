@@ -63,11 +63,13 @@ var AX_LIST = [
 ];
 
 // достижения по нику (в нижнем регистре)
+var AX_PVP1 = { icon: "../assets/images/achievements/pvp-championship-1.png",
+                name: "Участие в Axied PVP Championship #1" };
 var AX_ACHIEVEMENTS = {
-  "ducki4": [
-    { icon: "../assets/images/achievements/pvp-championship-1.png",
-      name: "Участие в Axied PVP Championship #1" }
-  ]
+  "ducki4":  [AX_PVP1],
+  "voldrik": [AX_PVP1],
+  "fyrones": [AX_PVP1],
+  "freiqks": [AX_PVP1]
 };
 
 var AX_PROFILES = {};
