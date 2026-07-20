@@ -13,6 +13,7 @@ not_in_nav: |
   !/misc/template-lock.md
   !/misc/item-signing.md
   !/rules/general-rules.md
+  !/profiles/index.md
 copyright: '© 2026 Axied Project — Все права защищены. Axied не связан с Mojang AB<br>Создатель: Соковец Григорий Юрьевич'
 
 theme:
@@ -60,10 +61,10 @@ extra:
       name: Магазин
 
 extra_css:
-  - stylesheets/extra.css?v=20260711c
+  - stylesheets/extra.css?v=20260711g
 
 extra_javascript:
-  - javascripts/extra.js?v=20260711c
+  - javascripts/extra.js?v=20260711g
 
 markdown_extensions:
   - admonition
@@ -105,3 +106,4 @@ nav:
   - 🔒 Блокировка шаблонов: misc/template-lock.md
   - 📝 Подписывание предметов: misc/item-signing.md
   - 📜 Правила: rules/general-rules.md
+  - 👤 Профили: profiles/index.md
