@@ -27,7 +27,6 @@ hide:
         <span class="ax-profile__nick" id="ax-p-nick"></span>
         <span class="ax-profile__joined" id="ax-p-joined"></span>
         <img class="ax-profile__skin" id="ax-p-skin" src="" alt="">
-        <span class="ax-profile__birth" id="ax-p-birth"></span>
       </div>
       <div class="ax-profile__right">
         <span class="ax-profile__section">Достижения</span>
@@ -38,15 +37,40 @@ hide:
 </div>
 
 <script>
-var AX_PROFILES = {
-  "ducki4": {
-    nick: "Ducki4",
-    joined: "Присоединился 7 июля 2026",
-    birth: "13 февраля 2011",
-    skin: "../assets/images/profiles/Ducki4.png",
+var AX_NOSKIN = "../assets/images/profiles/_noskin.png";
+// skin: true — есть лицензионный скин, false — показываем заглушку
+var AX_LIST = [
+  ["Ducki4",         "Присоединился 7 июля 2026",   true],
+  ["pentysss",       "Присоединилась 7 июля 2026",  false],
+  ["freiqks",        "Присоединился 7 июля 2026",   true],
+  ["Fyrones",        "Присоединился 7 июля 2026",   true],
+  ["litWIN228",      "Присоединилась 7 июля 2026",  false],
+  ["Puddingdolli",   "Присоединилась 7 июля 2026",  false],
+  ["Pr3list",        "Присоединился 7 июля 2026",   true],
+  ["illkarse",       "Присоединилась 7 июля 2026",  false],
+  ["Fat0ne_",        "Присоединился 9 июля 2026",   false],
+  ["Denya_Den",      "Присоединился 9 июля 2026",   true],
+  ["picno",          "Присоединился 9 июля 2026",   true],
+  ["voldrik",        "Присоединился 11 июля 2026",  true],
+  ["korka_343",      "Присоединился 11 июля 2026",  true],
+  ["sona_5",         "Присоединилась 12 июля 2026", true],
+  ["Last_Seraphim_", "Присоединился 13 июля 2026",  false],
+  ["xesfak1",        "Присоединился 15 июля 2026",  false],
+  ["Eilis",          "Присоединилась 15 июля 2026", true],
+  ["DReamkoru",      "Присоединился 15 июля 2026",  false],
+  ["ItzFrames",      "Присоединился 15 июля 2026",  true],
+  ["Fasochka666",    "Присоединилась 15 июля 2026", false]
+];
+
+var AX_PROFILES = {};
+AX_LIST.forEach(function (r) {
+  AX_PROFILES[r[0].toLowerCase()] = {
+    nick: r[0],
+    joined: r[1],
+    skin: r[2] ? ("../assets/images/profiles/" + r[0] + ".png") : AX_NOSKIN,
     achievements: []
-  }
-};
+  };
+});
 
 (function () {
   var modal = document.getElementById('ax-modal');
@@ -58,9 +82,9 @@ var AX_PROFILES = {
   function open(p) {
     document.getElementById('ax-p-nick').textContent = p.nick;
     document.getElementById('ax-p-joined').textContent = p.joined;
-    document.getElementById('ax-p-birth').textContent = '🎂 ' + p.birth;
     var skin = document.getElementById('ax-p-skin');
     skin.src = p.skin; skin.alt = p.nick;
+    skin.onerror = function () { this.onerror = null; this.src = AX_NOSKIN; };
     var ach = document.getElementById('ax-p-ach');
     ach.textContent = (p.achievements && p.achievements.length) ? '' : 'Тут пока что пусто';
     modal.hidden = false;
