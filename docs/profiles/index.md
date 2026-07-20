@@ -62,13 +62,22 @@ var AX_LIST = [
   ["Fasochka666",    "Присоединилась 15 июля 2026", false]
 ];
 
+// достижения по нику (в нижнем регистре)
+var AX_ACHIEVEMENTS = {
+  "ducki4": [
+    { icon: "../assets/images/achievements/pvp-championship-1.png",
+      name: "Участие в Axied PVP Championship #1" }
+  ]
+};
+
 var AX_PROFILES = {};
 AX_LIST.forEach(function (r) {
-  AX_PROFILES[r[0].toLowerCase()] = {
+  var key = r[0].toLowerCase();
+  AX_PROFILES[key] = {
     nick: r[0],
     joined: r[1],
     skin: r[2] ? ("../assets/images/profiles/" + r[0] + ".png") : AX_NOSKIN,
-    achievements: []
+    achievements: AX_ACHIEVEMENTS[key] || []
   };
 });
 
@@ -86,7 +95,25 @@ AX_LIST.forEach(function (r) {
     skin.src = p.skin; skin.alt = p.nick;
     skin.onerror = function () { this.onerror = null; this.src = AX_NOSKIN; };
     var ach = document.getElementById('ax-p-ach');
-    ach.textContent = (p.achievements && p.achievements.length) ? '' : 'Тут пока что пусто';
+    ach.innerHTML = '';
+    if (p.achievements && p.achievements.length) {
+      ach.classList.remove('ax-profile__empty');
+      ach.classList.add('ax-ach-grid');
+      p.achievements.forEach(function (a) {
+        var item = document.createElement('div');
+        item.className = 'ax-ach';
+        var img = document.createElement('img');
+        img.src = a.icon; img.alt = a.name; img.loading = 'lazy';
+        var name = document.createElement('span');
+        name.className = 'ax-ach__name'; name.textContent = a.name;
+        item.appendChild(img); item.appendChild(name);
+        ach.appendChild(item);
+      });
+    } else {
+      ach.classList.remove('ax-ach-grid');
+      ach.classList.add('ax-profile__empty');
+      ach.textContent = 'Тут пока что пусто';
+    }
     modal.hidden = false;
     void modal.offsetHeight; // форс reflow: стартовое состояние отрисовано
     modal.classList.add('is-open');

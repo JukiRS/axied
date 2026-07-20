@@ -875,3 +875,133 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .ax-modal__backdrop, .ax-modal__card { transition: none; }
 }
+
+/* ---- Достижения в профиле ---- */
+.ax-ach-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(78px, 90px));
+  gap: 0.7rem;
+  align-content: start;
+  min-height: 170px;
+}
+.ax-ach {
+  position: relative;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  padding: 7px;
+  border-radius: 14px;
+  border: 1px solid var(--bonsai-border);
+  background: rgba(157, 92, 255, 0.06);
+  cursor: default;
+  transition: transform 0.15s, border-color 0.15s, box-shadow 0.2s;
+}
+.ax-ach:hover {
+  transform: translateY(-3px);
+  border-color: rgba(201, 169, 255, 0.55);
+  box-shadow: 0 10px 24px rgba(157, 92, 255, 0.22);
+}
+.ax-ach img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.ax-ach__name {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  width: max-content;
+  max-width: 190px;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.72rem;
+  line-height: 1.3;
+  text-align: center;
+  color: #ebe9ee;
+  background: #171420;
+  border: 1px solid var(--bonsai-border);
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s, transform 0.15s;
+  z-index: 5;
+}
+.ax-ach:hover .ax-ach__name {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ============================================================
+   МИНИМАЛИЗМ — чистый облегчённый вид (тёмно-фиолетовый)
+   ============================================================ */
+:root { --bonsai-glow: rgba(201, 169, 255, 0.16); }
+[data-md-color-scheme="slate"] { --bonsai-border: rgba(201, 169, 255, 0.10); }
+
+/* мягче общий фон */
+body {
+  background-image:
+    radial-gradient(1000px 480px at 82% -12%, rgba(157, 92, 255, 0.09), transparent 62%),
+    radial-gradient(820px 440px at 4% 2%, rgba(138, 99, 210, 0.06), transparent 58%);
+}
+
+/* Hero: без пиксельного паттерна, плоский, лёгкий */
+.bh-hero::after { display: none; }
+.bh-hero {
+  background: linear-gradient(180deg, rgba(32, 27, 40, 0.5), rgba(23, 20, 32, 0.3));
+  border: 1px solid var(--bonsai-border);
+  box-shadow: none;
+}
+.bh-hero h1 {
+  background: none !important;
+  -webkit-text-fill-color: currentColor !important;
+  color: #efeafb;
+}
+.bh-hero-logo { filter: none; }
+.bh-badge { background: rgba(157, 92, 255, 0.08); }
+
+/* Карточки — плоские, тонкая рамка, спокойный ховер */
+.bh-card,
+.bh-staff,
+.ax-modal__card,
+.ax-profile__empty,
+.ax-ach {
+  background: rgba(32, 27, 40, 0.5) !important;
+  box-shadow: none !important;
+}
+.bh-card::before { display: none; }
+.bh-card:hover,
+.bh-staff:hover,
+.ax-ach:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.32) !important;
+}
+.ax-modal__card { box-shadow: 0 22px 55px rgba(0, 0, 0, 0.5) !important; }
+
+/* Кнопки — плоские, без неонового свечения */
+.md-typeset .md-button {
+  border-color: var(--bonsai-border);
+}
+.md-typeset .md-button:hover {
+  transform: translateY(-1px);
+  box-shadow: none;
+}
+.md-typeset .md-button--primary,
+.md-typeset .md-button--primary:hover {
+  background: var(--bonsai-emerald-2);
+}
+
+/* Таблицы / заметки — легче */
+.md-typeset table:not([class]) {
+  box-shadow: none;
+  background: rgba(32, 27, 40, 0.5);
+}
+.md-typeset .admonition,
+.md-typeset details {
+  box-shadow: none;
+  background: rgba(32, 27, 40, 0.45);
+}
+
+/* Верхняя панель / поиск — тише */
+.bh-social:hover { transform: none; }
