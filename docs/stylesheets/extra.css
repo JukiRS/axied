@@ -3,45 +3,45 @@
    ============================================================ */
 
 :root {
-  --bonsai-emerald:   #c9a9ff;
-  --bonsai-emerald-2: #9d5cff;
-  --bonsai-emerald-3: #8a63d2;
-  --bonsai-mint:      #c9a9ff;
-  --bonsai-bg:        #0e0d12;
-  --bonsai-bg-2:      #171420;
-  --bonsai-surface:   #201b28;
-  --bonsai-border:    rgba(201, 169, 255, 0.14);
-  --bonsai-glow:      rgba(157, 92, 255, 0.35);
+  --bonsai-emerald:   #7c3aed;
+  --bonsai-emerald-2: #7c3aed;
+  --bonsai-emerald-3: #6d28d9;
+  --bonsai-mint:      #7c3aed;
+  --bonsai-bg:        #f5f3fb;
+  --bonsai-bg-2:      #ffffff;
+  --bonsai-surface:   #ffffff;
+  --bonsai-border:    rgba(124, 58, 237, 0.14);
+  --bonsai-glow:      rgba(124, 58, 237, 0.35);
 }
 
 /* ---- Палитра (slate + кастомные акценты) ---- */
-[data-md-color-scheme="slate"] {
+[data-md-color-scheme="default"] {
   --md-hue: 270;
 
-  --md-primary-fg-color:        #171420;
-  --md-primary-fg-color--light: #201b28;
-  --md-primary-fg-color--dark:  #0e0d12;
-  --md-primary-bg-color:        #efeafb;
-  --md-primary-bg-color--light: rgba(240, 235, 252, 0.7);
+  --md-primary-fg-color:        #ffffff;
+  --md-primary-fg-color--light: #ffffff;
+  --md-primary-fg-color--dark:  #f5f3fb;
+  --md-primary-bg-color:        #2a2440;
+  --md-primary-bg-color--light: rgba(42, 36, 64, 0.7);
 
   --md-accent-fg-color:         var(--bonsai-emerald);
-  --md-accent-fg-color--transparent: rgba(201, 169, 255, 0.1);
-  --md-accent-bg-color:         #0d0f0d;
+  --md-accent-fg-color--transparent: rgba(124, 58, 237, 0.1);
+  --md-accent-bg-color:         #ffffff;
 
   --md-default-bg-color:        var(--bonsai-bg);
-  --md-default-fg-color:        rgba(235, 233, 238, 0.92);
-  --md-default-fg-color--light: rgba(235, 233, 238, 0.72);
-  --md-default-fg-color--lighter: rgba(235, 233, 238, 0.42);
-  --md-default-fg-color--lightest: rgba(235, 233, 238, 0.1);
+  --md-default-fg-color:        rgba(42, 36, 64, 0.92);
+  --md-default-fg-color--light: rgba(42, 36, 64, 0.72);
+  --md-default-fg-color--lighter: rgba(42, 36, 64, 0.42);
+  --md-default-fg-color--lightest: rgba(42, 36, 64, 0.1);
 
   --md-typeset-a-color:         var(--bonsai-mint);
-  --md-typeset-mark-color:      rgba(201, 169, 255, 0.28);
+  --md-typeset-mark-color:      rgba(124, 58, 237, 0.28);
 
-  --md-code-bg-color:           #171420;
-  --md-code-fg-color:           #c9a9ff;
+  --md-code-bg-color:           #ffffff;
+  --md-code-fg-color:           #7c3aed;
 
-  --md-footer-bg-color:         #0a0910;
-  --md-footer-bg-color--dark:   #0a0910;
+  --md-footer-bg-color:         #ece6f6;
+  --md-footer-bg-color--dark:   #ece6f6;
 
   --md-typeset-table-color:     var(--bonsai-border);
 }
@@ -50,18 +50,18 @@
 body {
   background-color: var(--bonsai-bg);
   background-image:
-    radial-gradient(1100px 520px at 78% -8%, rgba(157, 92, 255, 0.16), transparent 60%),
-    radial-gradient(900px 480px at 8% 4%, rgba(138, 99, 210, 0.12), transparent 55%);
+    radial-gradient(1100px 520px at 78% -8%, rgba(124, 58, 237, 0.16), transparent 60%),
+    radial-gradient(900px 480px at 8% 4%, rgba(124, 58, 237, 0.12), transparent 55%);
   background-attachment: fixed;
 }
 
 /* ---- Шапка: стекло + размытие ---- */
 .md-header {
-  background: rgba(14, 13, 18, 0.78);
+  background: rgba(255, 255, 255, 0.78);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--bonsai-border);
-  box-shadow: 0 1px 0 rgba(201, 169, 255, 0.06);
+  box-shadow: 0 1px 0 rgba(124, 58, 237, 0.06);
 }
 .md-header--shadow {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), 0 1px 0 var(--bonsai-border);
@@ -94,21 +94,21 @@ body {
 
 /* ---- Поиск ---- */
 .md-search__form {
-  background: rgba(32, 27, 40, 0.85);
+  background: rgba(255, 255, 255, 0.85);
   border: 1px solid var(--bonsai-border);
   border-radius: 10px;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 .md-search__form:hover,
 [data-md-toggle="search"]:checked ~ .md-header .md-search__form {
-  background: rgba(32, 27, 40, 0.95);
-  border-color: rgba(201, 169, 255, 0.4);
-  box-shadow: 0 0 0 3px rgba(157, 92, 255, 0.12);
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(124, 58, 237, 0.4);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.12);
 }
-.md-search__input::placeholder { color: rgba(235, 233, 238, 0.5); }
+.md-search__input::placeholder { color: rgba(42, 36, 64, 0.5); }
 .md-search-result__link:hover,
 .md-search-result__link[data-md-state="active"] {
-  background: rgba(157, 92, 255, 0.1);
+  background: rgba(124, 58, 237, 0.1);
 }
 
 /* ---- Заголовки ---- */
@@ -127,7 +127,7 @@ body {
   padding-bottom: 0.3em;
   border-bottom: 1px solid var(--bonsai-border);
 }
-.md-typeset h3 { font-weight: 700; color: #ebe9ee; }
+.md-typeset h3 { font-weight: 700; color: #2a2440; }
 .md-typeset h2 .headerlink,
 .md-typeset h3 .headerlink { color: var(--bonsai-emerald-2); }
 
@@ -139,7 +139,7 @@ body {
 }
 .md-typeset a:hover {
   color: var(--bonsai-emerald);
-  border-bottom-color: rgba(201, 169, 255, 0.5);
+  border-bottom-color: rgba(124, 58, 237, 0.5);
 }
 
 /* ---- Таблицы: карточный стиль ---- */
@@ -148,35 +148,35 @@ body {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
-  background: rgba(32, 27, 40, 0.6);
+  background: rgba(255, 255, 255, 0.6);
 }
 .md-typeset table:not([class]) th {
-  background: linear-gradient(180deg, rgba(157, 92, 255, 0.16), rgba(157, 92, 255, 0.06));
-  color: #ebe9ee;
+  background: linear-gradient(180deg, rgba(124, 58, 237, 0.16), rgba(124, 58, 237, 0.06));
+  color: #2a2440;
   font-weight: 700;
   border: none;
   border-bottom: 1px solid var(--bonsai-border);
 }
 .md-typeset table:not([class]) td {
   border: none;
-  border-bottom: 1px solid rgba(201, 169, 255, 0.07);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.07);
 }
 .md-typeset table:not([class]) tr:hover td {
-  background: rgba(157, 92, 255, 0.06);
+  background: rgba(124, 58, 237, 0.06);
 }
 .md-typeset table:not([class]) tr:last-child td { border-bottom: none; }
 
 /* ---- Цитаты / blockquote ---- */
 .md-typeset blockquote {
   border-left: 3px solid var(--bonsai-emerald-2);
-  background: linear-gradient(90deg, rgba(157, 92, 255, 0.08), transparent);
+  background: linear-gradient(90deg, rgba(124, 58, 237, 0.08), transparent);
   border-radius: 0 10px 10px 0;
-  color: rgba(235, 233, 238, 0.88);
+  color: rgba(42, 36, 64, 0.88);
 }
 
 /* ---- Код ---- */
 .md-typeset code {
-  border: 1px solid rgba(201, 169, 255, 0.16);
+  border: 1px solid rgba(124, 58, 237, 0.16);
   border-radius: 6px;
   padding: 0.1em 0.42em;
 }
@@ -195,10 +195,10 @@ body {
 .md-nav__item .md-nav__link--active {
   color: var(--bonsai-emerald);
   font-weight: 700;
-  background: rgba(157, 92, 255, 0.1);
+  background: rgba(124, 58, 237, 0.1);
 }
 .md-nav__link:hover { color: var(--bonsai-mint); }
-.md-nav__link:focus { background: rgba(157, 92, 255, 0.08); }
+.md-nav__link:focus { background: rgba(124, 58, 237, 0.08); }
 
 /* подсветка активного пункта в TOC */
 .md-nav--secondary .md-nav__link--active { background: transparent; }
@@ -209,7 +209,7 @@ body {
   border: 1px solid var(--bonsai-border);
   border-radius: 12px;
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.3);
-  background: rgba(32, 27, 40, 0.55);
+  background: rgba(255, 255, 255, 0.55);
 }
 
 /* ---- Кнопки ---- */
@@ -217,12 +217,12 @@ body {
   border-radius: 10px;
   font-weight: 700;
   color: var(--bonsai-mint);
-  border: 1px solid rgba(201, 169, 255, 0.45);
-  background: rgba(157, 92, 255, 0.06);
+  border: 1px solid rgba(124, 58, 237, 0.45);
+  background: rgba(124, 58, 237, 0.06);
   transition: transform 0.15s, box-shadow 0.2s, background 0.2s, color 0.2s;
 }
 .md-typeset .md-button:hover {
-  color: #0d0f0d;
+  color: #ffffff;
   background: var(--bonsai-emerald);
 }
 .md-typeset .md-button:hover {
@@ -233,7 +233,7 @@ body {
 .md-typeset .md-button--primary:hover {
   background: linear-gradient(135deg, var(--bonsai-mint), var(--bonsai-emerald-2));
   border-color: transparent;
-  color: #0d0f0d;
+  color: #ffffff;
 }
 
 /* ---- Подвал ---- */
@@ -266,15 +266,15 @@ body {
   border-radius: 22px;
   border: 1px solid var(--bonsai-border);
   background:
-    radial-gradient(700px 280px at 50% -20%, rgba(157, 92, 255, 0.22), transparent 70%),
-    linear-gradient(180deg, rgba(32, 27, 40, 0.9), rgba(14, 13, 18, 0.6));
+    radial-gradient(700px 280px at 50% -20%, rgba(124, 58, 237, 0.22), transparent 70%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6));
   overflow: hidden;
 }
 .bh-hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 1px 1px, rgba(201, 169, 255, 0.08) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, rgba(124, 58, 237, 0.08) 1px, transparent 0);
   background-size: 22px 22px;
   pointer-events: none;
   opacity: 0.6;
@@ -295,7 +295,7 @@ body {
   max-width: 640px;
   margin: 0 auto 1.4rem;
   font-size: 0.92rem;
-  color: rgba(235, 233, 238, 0.72);
+  color: rgba(42, 36, 64, 0.72);
 }
 .bh-badge {
   display: inline-block;
@@ -307,7 +307,7 @@ body {
   color: var(--bonsai-mint);
   border: 1px solid var(--bonsai-border);
   border-radius: 999px;
-  background: rgba(157, 92, 255, 0.08);
+  background: rgba(124, 58, 237, 0.08);
   margin-bottom: 1.2rem;
 }
 
@@ -323,7 +323,7 @@ body {
   padding: 1.3rem 1.25rem;
   border-radius: 16px;
   border: 1px solid var(--bonsai-border);
-  background: linear-gradient(180deg, rgba(32, 27, 40, 0.85), rgba(23, 20, 32, 0.7));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(250, 248, 255, 0.7));
   color: var(--md-default-fg-color) !important;
   text-decoration: none !important;
   border-bottom: 1px solid var(--bonsai-border) !important;
@@ -342,9 +342,9 @@ body {
 }
 .bh-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(201, 169, 255, 0.45) !important;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(201, 169, 255, 0.15);
-  background: linear-gradient(180deg, rgba(40, 34, 55, 0.95), rgba(23, 20, 32, 0.8));
+  border-color: rgba(124, 58, 237, 0.45) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(124, 58, 237, 0.15);
+  background: linear-gradient(180deg, rgba(245, 242, 252, 0.95), rgba(250, 248, 255, 0.8));
 }
 .bh-card:hover::before { opacity: 1; }
 .bh-card .bh-card-icon {
@@ -357,13 +357,13 @@ body {
   display: block;
   font-weight: 700;
   font-size: 1.02rem;
-  color: #ebe9ee;
+  color: #2a2440;
   margin-bottom: 0.3rem;
 }
 .bh-card .bh-card-desc {
   display: block;
   font-size: 0.8rem;
-  color: rgba(235, 233, 238, 0.62);
+  color: rgba(42, 36, 64, 0.62);
   line-height: 1.5;
 }
 
@@ -373,7 +373,7 @@ body {
   position: relative;
   padding: 0.6rem 0 0.6rem 3rem;
   margin: 0;
-  border-bottom: 1px solid rgba(201, 169, 255, 0.08);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.08);
 }
 .bh-steps li:last-child { border-bottom: none; }
 .bh-steps li::before {
@@ -388,7 +388,7 @@ body {
   place-items: center;
   font-weight: 800;
   font-size: 0.85rem;
-  color: #0d0f0d;
+  color: #ffffff;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--bonsai-emerald), var(--bonsai-emerald-3));
   box-shadow: 0 4px 14px var(--bonsai-glow);
@@ -419,7 +419,7 @@ body {
   padding: 0.9rem 0.6rem 0.7rem;
   border-radius: 14px;
   border: 1px solid var(--bonsai-border);
-  background: linear-gradient(180deg, rgba(32, 27, 40, 0.85), rgba(23, 20, 32, 0.7));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(250, 248, 255, 0.7));
   transition: transform 0.18s ease, border-color 0.18s, box-shadow 0.25s;
 }
 .bh-staff:hover {
@@ -441,14 +441,14 @@ body {
   order: 1;
   font-weight: 800;
   font-size: 0.95rem;
-  color: #ebe9ee;
+  color: #2a2440;
   line-height: 1.1;
   word-break: break-word;
 }
 .bh-staff-name {
   order: 1;
   font-size: 0.74rem;
-  color: rgba(235, 233, 238, 0.6);
+  color: rgba(42, 36, 64, 0.6);
   margin-bottom: 0.1rem;
 }
 .bh-staff-role {
@@ -514,7 +514,7 @@ body {
    Верхняя панель (announce) с соц-пилюлями
    ============================================================ */
 .md-banner {
-  background: linear-gradient(90deg, #0e0d12, #151021 50%, #0e0d12);
+  background: linear-gradient(90deg, #f5f3fb, #151021 50%, #f5f3fb);
   border-bottom: 1px solid var(--bonsai-border);
   color: var(--md-default-fg-color);
 }
@@ -532,10 +532,10 @@ body {
 }
 .bh-topbar-ip {
   font-weight: 600;
-  color: rgba(235, 233, 238, 0.85);
+  color: rgba(42, 36, 64, 0.85);
 }
 .bh-topbar-ip code {
-  background: rgba(157, 92, 255, 0.12);
+  background: rgba(124, 58, 237, 0.12);
   border: 1px solid var(--bonsai-border);
   color: var(--bonsai-mint);
   padding: 0.05rem 0.4rem;
@@ -550,14 +550,14 @@ body {
   border-radius: 999px;
   color: var(--bonsai-mint) !important;
   border: 1px solid var(--bonsai-border);
-  background: rgba(157, 92, 255, 0.08);
+  background: rgba(124, 58, 237, 0.08);
   text-decoration: none;
   transition: transform 0.12s, background 0.18s, color 0.18s, box-shadow 0.18s;
 }
 .bh-pill:hover {
   transform: translateY(-1px);
   background: var(--bonsai-emerald);
-  color: #0d0f0d !important;
+  color: #ffffff !important;
   box-shadow: 0 4px 14px var(--bonsai-glow);
 }
 .bh-pill--discord {
@@ -649,13 +649,13 @@ body {
     transition: background 0.15s, color 0.15s, padding 0.15s;
   }
   .md-nav--primary .md-nav__item .md-nav__link:hover {
-    background: rgba(157, 92, 255, 0.09);
+    background: rgba(124, 58, 237, 0.09);
     color: var(--bonsai-mint);
   }
   /* Активный пункт — зелёная подсветка с полоской слева (как GitBook) */
   .md-nav--primary .md-nav__link--active,
   .md-nav--primary .md-nav__item .md-nav__link--active {
-    background: rgba(157, 92, 255, 0.14);
+    background: rgba(124, 58, 237, 0.14);
     color: var(--bonsai-mint) !important;
     font-weight: 700;
     box-shadow: inset 3px 0 0 var(--bonsai-emerald);
@@ -738,7 +738,7 @@ body {
   font-size: 1.5rem;
   font-weight: 800;
   line-height: 1.1;
-  color: #ebe9ee;
+  color: #2a2440;
   word-break: break-word;
   margin: 0.1rem 0 0.5rem;
 }
@@ -749,8 +749,8 @@ body {
   font-weight: 700;
   border-radius: 999px;
   color: var(--bonsai-emerald);
-  border: 1px solid rgba(201, 169, 255, 0.4);
-  background: rgba(157, 92, 255, 0.12);
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  background: rgba(124, 58, 237, 0.12);
 }
 .ax-profile img.ax-profile__skin {
   height: 200px;
@@ -773,7 +773,7 @@ body {
 .ax-profile__section {
   font-size: 0.95rem;
   font-weight: 700;
-  color: #ebe9ee;
+  color: #2a2440;
   margin-bottom: 0.9rem;
 }
 .ax-profile__empty {
@@ -784,8 +784,8 @@ body {
   padding: 1.4rem 1rem;
   text-align: center;
   border-radius: 16px;
-  border: 1px dashed rgba(201, 169, 255, 0.28);
-  background: rgba(157, 92, 255, 0.05);
+  border: 1px dashed rgba(124, 58, 237, 0.28);
+  background: rgba(124, 58, 237, 0.05);
   color: var(--md-default-fg-color--light);
 }
 @media (max-width: 700px) {
@@ -802,15 +802,15 @@ body {
   margin: 0.6rem 0 0.9rem;
   font-size: 0.9rem;
   color: var(--md-default-fg-color);
-  background: rgba(32, 27, 40, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--bonsai-border);
   border-radius: 10px;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 .ax-login__input:focus {
-  border-color: rgba(201, 169, 255, 0.5);
-  box-shadow: 0 0 0 3px rgba(157, 92, 255, 0.15);
+  border-color: rgba(124, 58, 237, 0.5);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
 }
 .ax-login__err { min-height: 1.2em; margin-top: 0.7rem; color: #ff8a8a; font-size: 0.82rem; }
 
@@ -827,7 +827,7 @@ body {
 .ax-modal__backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(6, 5, 10, 0.72);
+  background: rgba(40, 32, 60, 0.72);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   opacity: 0;
@@ -841,8 +841,8 @@ body {
   padding: 1.3rem 1.4rem;
   border-radius: 20px;
   border: 1px solid var(--bonsai-border);
-  background: linear-gradient(180deg, rgba(32, 27, 40, 0.98), rgba(23, 20, 32, 0.98));
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(157, 92, 255, 0.12);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(250, 248, 255, 0.98));
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(124, 58, 237, 0.12);
   opacity: 0;
   transform: translateY(18px) scale(0.96);
   transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
@@ -870,7 +870,7 @@ body {
 }
 .ax-modal__close:hover {
   color: var(--bonsai-emerald);
-  background: rgba(157, 92, 255, 0.12);
+  background: rgba(124, 58, 237, 0.12);
 }
 @media (prefers-reduced-motion: reduce) {
   .ax-modal__backdrop, .ax-modal__card { transition: none; }
@@ -880,7 +880,7 @@ body {
 .ax-ach-grid {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(78px, 90px));
+  grid-template-columns: repeat(auto-fill, minmax(108px, 120px));
   gap: 0.7rem;
   align-content: start;
   min-height: 170px;
@@ -890,17 +890,17 @@ body {
   aspect-ratio: 1;
   display: grid;
   place-items: center;
-  padding: 7px;
+  padding: 3px;
   border-radius: 14px;
   border: 1px solid var(--bonsai-border);
-  background: rgba(157, 92, 255, 0.06);
+  background: rgba(124, 58, 237, 0.06);
   cursor: default;
   transition: transform 0.15s, border-color 0.15s, box-shadow 0.2s;
 }
 .ax-ach:hover {
   transform: translateY(-3px);
-  border-color: rgba(201, 169, 255, 0.55);
-  box-shadow: 0 10px 24px rgba(157, 92, 255, 0.22);
+  border-color: rgba(124, 58, 237, 0.55);
+  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.22);
 }
 .ax-ach img {
   width: 100%;
@@ -918,8 +918,8 @@ body {
   font-size: 0.72rem;
   line-height: 1.3;
   text-align: center;
-  color: #ebe9ee;
-  background: #171420;
+  color: #2a2440;
+  background: #ffffff;
   border: 1px solid var(--bonsai-border);
   border-radius: 8px;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.55);
@@ -936,30 +936,30 @@ body {
 /* ============================================================
    МИНИМАЛИЗМ — чистый облегчённый вид (тёмно-фиолетовый)
    ============================================================ */
-:root { --bonsai-glow: rgba(201, 169, 255, 0.16); }
-[data-md-color-scheme="slate"] { --bonsai-border: rgba(201, 169, 255, 0.10); }
+:root { --bonsai-glow: rgba(124, 58, 237, 0.16); }
+[data-md-color-scheme="default"] { --bonsai-border: rgba(124, 58, 237, 0.10); }
 
 /* мягче общий фон */
 body {
   background-image:
-    radial-gradient(1000px 480px at 82% -12%, rgba(157, 92, 255, 0.09), transparent 62%),
-    radial-gradient(820px 440px at 4% 2%, rgba(138, 99, 210, 0.06), transparent 58%);
+    radial-gradient(1000px 480px at 82% -12%, rgba(124, 58, 237, 0.09), transparent 62%),
+    radial-gradient(820px 440px at 4% 2%, rgba(124, 58, 237, 0.06), transparent 58%);
 }
 
 /* Hero: без пиксельного паттерна, плоский, лёгкий */
 .bh-hero::after { display: none; }
 .bh-hero {
-  background: linear-gradient(180deg, rgba(32, 27, 40, 0.5), rgba(23, 20, 32, 0.3));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(250, 248, 255, 0.3));
   border: 1px solid var(--bonsai-border);
   box-shadow: none;
 }
 .bh-hero h1 {
   background: none !important;
   -webkit-text-fill-color: currentColor !important;
-  color: #efeafb;
+  color: #2a2440;
 }
 .bh-hero-logo { filter: none; }
-.bh-badge { background: rgba(157, 92, 255, 0.08); }
+.bh-badge { background: rgba(124, 58, 237, 0.08); }
 
 /* Карточки — плоские, тонкая рамка, спокойный ховер */
 .bh-card,
@@ -967,7 +967,7 @@ body {
 .ax-modal__card,
 .ax-profile__empty,
 .ax-ach {
-  background: rgba(32, 27, 40, 0.5) !important;
+  background: rgba(255, 255, 255, 0.5) !important;
   box-shadow: none !important;
 }
 .bh-card::before { display: none; }
@@ -995,13 +995,81 @@ body {
 /* Таблицы / заметки — легче */
 .md-typeset table:not([class]) {
   box-shadow: none;
-  background: rgba(32, 27, 40, 0.5);
+  background: rgba(255, 255, 255, 0.5);
 }
 .md-typeset .admonition,
 .md-typeset details {
   box-shadow: none;
-  background: rgba(32, 27, 40, 0.45);
+  background: rgba(255, 255, 255, 0.45);
 }
 
 /* Верхняя панель / поиск — тише */
 .bh-social:hover { transform: none; }
+
+/* ============================================================
+   СВЕТЛАЯ ТЕМА — доводка (минимализм)
+   ============================================================ */
+/* заголовки контента — тёмный→фиолетовый градиент (белый был невидим) */
+.md-typeset h1 {
+  background: linear-gradient(95deg, #2a2440 10%, #7c3aed 95%);
+}
+/* мягкие тени вместо чёрных */
+.md-header { box-shadow: 0 1px 0 var(--bonsai-border) !important; }
+.md-header--shadow { box-shadow: 0 6px 20px rgba(124, 58, 237, 0.10) !important; }
+
+/* карточки — чистый белый + мягкая фиолетовая тень */
+.bh-card,
+.bh-staff,
+.ax-modal__card,
+.ax-ach,
+.md-typeset table:not([class]),
+.md-typeset .admonition,
+.md-typeset details {
+  background: #ffffff !important;
+}
+.bh-card, .bh-staff, .ax-ach {
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.07) !important;
+}
+.bh-card:hover, .bh-staff:hover, .ax-ach:hover {
+  box-shadow: 0 12px 26px rgba(124, 58, 237, 0.14) !important;
+}
+.ax-modal__card { box-shadow: 0 24px 60px rgba(42, 36, 64, 0.28) !important; }
+.ax-profile__empty { background: #faf8ff !important; }
+.md-typeset table:not([class]),
+.md-typeset .admonition,
+.md-typeset details { box-shadow: 0 6px 18px rgba(124, 58, 237, 0.06) !important; }
+
+/* hero — светлый, мягкий */
+.bh-hero {
+  background: linear-gradient(180deg, #ffffff, #faf8ff) !important;
+  border: 1px solid var(--bonsai-border);
+}
+.bh-hero h1 { color: #2a2440 !important; }
+.bh-hero-logo { filter: none; }
+.md-header__button.md-logo img { filter: none; }
+
+/* верхняя панель — светлая */
+.md-banner { background: #f0eafa; }
+.bh-topbar-ip { color: #4a3f6e; }
+.bh-topbar-ip code { color: #6d28d9; background: rgba(124, 58, 237, 0.10); }
+
+/* кнопка «Профиль» в шапке */
+.bh-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.18rem 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 999px;
+  color: #6d28d9;
+  border: 1px solid var(--bonsai-border);
+  background: rgba(124, 58, 237, 0.08);
+  transition: background 0.15s, color 0.15s, transform 0.15s;
+}
+.bh-pill:hover { background: #7c3aed; color: #ffffff; transform: translateY(-1px); }
+
+/* модалка: мягче затемнение на светлом фоне */
+.ax-modal__backdrop { background: rgba(42, 36, 64, 0.5); }
+
+/* соц-иконки в шапке — фиолетовые */
+.bh-social { color: #7c3aed; }

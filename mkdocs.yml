@@ -13,7 +13,6 @@ not_in_nav: |
   !/misc/template-lock.md
   !/misc/item-signing.md
   !/rules/general-rules.md
-  !/profiles/index.md
 copyright: '© 2026 Axied Project — Все права защищены. Axied не связан с Mojang AB<br>Создатель: Соковец Григорий Юрьевич'
 
 theme:
@@ -28,7 +27,7 @@ theme:
     text: Manrope
     code: JetBrains Mono
   palette:
-    - scheme: slate
+    - scheme: default
       primary: custom
       accent: custom
   features:
@@ -61,10 +60,10 @@ extra:
       name: Магазин
 
 extra_css:
-  - stylesheets/extra.css?v=20260711j
+  - stylesheets/extra.css?v=20260711l
 
 extra_javascript:
-  - javascripts/extra.js?v=20260711j
+  - javascripts/extra.js?v=20260711l
 
 markdown_extensions:
   - admonition
@@ -106,4 +105,3 @@ nav:
   - 🔒 Блокировка шаблонов: misc/template-lock.md
   - 📝 Подписывание предметов: misc/item-signing.md
   - 📜 Правила: rules/general-rules.md
-  - 👤 Профили: profiles/index.md
