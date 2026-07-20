@@ -60,10 +60,10 @@ extra:
       name: Магазин
 
 extra_css:
-  - stylesheets/extra.css?v=20260711l
+  - stylesheets/extra.css?v=20260721a
 
 extra_javascript:
-  - javascripts/extra.js?v=20260711l
+  - javascripts/extra.js?v=20260721a
 
 markdown_extensions:
   - admonition
