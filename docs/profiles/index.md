@@ -48,6 +48,7 @@ var AX_LIST = [
   ["Puddingdolli",   "Присоединилась 7 июля 2026",  false],
   ["Pr3list",        "Присоединился 7 июля 2026",   true],
   ["illkarse",       "Присоединилась 7 июля 2026",  false],
+  ["sofflim",        "Присоединилась 7 июля 2026",  false],
   ["Fat0ne_",        "Присоединился 9 июля 2026",   false],
   ["Denya_Den",      "Присоединился 9 июля 2026",   true],
   ["picno",          "Присоединился 9 июля 2026",   true],
@@ -65,11 +66,15 @@ var AX_LIST = [
 // достижения по нику (в нижнем регистре)
 var AX_PVP1 = { icon: "../assets/images/achievements/pvp-championship-1.png",
                 name: "Участие в Axied PVP Championship #1" };
+var AX_PVP1_WIN = { icon: "../assets/images/achievements/pvp-championship-1-winner.png",
+                    name: "Чемпион Axied PVP Championship #1" };
 var AX_ACHIEVEMENTS = {
-  "ducki4":  [AX_PVP1],
-  "voldrik": [AX_PVP1],
-  "fyrones": [AX_PVP1],
-  "freiqks": [AX_PVP1]
+  "ducki4":       [AX_PVP1],
+  "fyrones":      [AX_PVP1],
+  "freiqks":      [AX_PVP1],
+  "puddingdolli": [AX_PVP1],
+  "sofflim":      [AX_PVP1],
+  "illkarse":     [AX_PVP1, AX_PVP1_WIN]
 };
 
 var AX_PROFILES = {};
