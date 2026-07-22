@@ -1,0 +1,1083 @@
+/* ============================================================
+   Bonsai House Wiki — премиальная тёмная изумрудная тема
+   ============================================================ */
+
+:root {
+  --bonsai-emerald:   #7c3aed;
+  --bonsai-emerald-2: #7c3aed;
+  --bonsai-emerald-3: #6d28d9;
+  --bonsai-mint:      #7c3aed;
+  --bonsai-bg:        #f5f3fb;
+  --bonsai-bg-2:      #ffffff;
+  --bonsai-surface:   #ffffff;
+  --bonsai-border:    rgba(124, 58, 237, 0.14);
+  --bonsai-glow:      rgba(124, 58, 237, 0.35);
+}
+
+/* ---- Палитра (slate + кастомные акценты) ---- */
+[data-md-color-scheme="default"] {
+  --md-hue: 270;
+
+  --md-primary-fg-color:        #ffffff;
+  --md-primary-fg-color--light: #ffffff;
+  --md-primary-fg-color--dark:  #f5f3fb;
+  --md-primary-bg-color:        #2a2440;
+  --md-primary-bg-color--light: rgba(42, 36, 64, 0.7);
+
+  --md-accent-fg-color:         var(--bonsai-emerald);
+  --md-accent-fg-color--transparent: rgba(124, 58, 237, 0.1);
+  --md-accent-bg-color:         #ffffff;
+
+  --md-default-bg-color:        var(--bonsai-bg);
+  --md-default-fg-color:        rgba(42, 36, 64, 0.92);
+  --md-default-fg-color--light: rgba(42, 36, 64, 0.72);
+  --md-default-fg-color--lighter: rgba(42, 36, 64, 0.42);
+  --md-default-fg-color--lightest: rgba(42, 36, 64, 0.1);
+
+  --md-typeset-a-color:         var(--bonsai-mint);
+  --md-typeset-mark-color:      rgba(124, 58, 237, 0.28);
+
+  --md-code-bg-color:           #ffffff;
+  --md-code-fg-color:           #7c3aed;
+
+  --md-footer-bg-color:         #ece6f6;
+  --md-footer-bg-color--dark:   #ece6f6;
+
+  --md-typeset-table-color:     var(--bonsai-border);
+}
+
+/* ---- Глобальный фон с мягким изумрудным сиянием ---- */
+body {
+  background-color: var(--bonsai-bg);
+  background-image:
+    radial-gradient(1100px 520px at 78% -8%, rgba(124, 58, 237, 0.16), transparent 60%),
+    radial-gradient(900px 480px at 8% 4%, rgba(124, 58, 237, 0.12), transparent 55%);
+  background-attachment: fixed;
+}
+
+/* ---- Шапка: стекло + размытие ---- */
+.md-header {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--bonsai-border);
+  box-shadow: 0 1px 0 rgba(124, 58, 237, 0.06);
+}
+.md-header--shadow {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), 0 1px 0 var(--bonsai-border);
+}
+.md-header__title {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.md-tabs {
+  background: transparent;
+  border-bottom: 1px solid var(--bonsai-border);
+}
+.md-tabs__link {
+  opacity: 0.78;
+  font-weight: 600;
+  transition: opacity 0.2s, color 0.2s;
+}
+.md-tabs__link:hover,
+.md-tabs__link--active {
+  opacity: 1;
+  color: var(--bonsai-mint);
+}
+
+/* ---- Логотип ---- */
+.md-header__button.md-logo img,
+.md-nav__button.md-logo img {
+  height: 1.7rem;
+  filter: drop-shadow(0 0 6px var(--bonsai-glow));
+}
+
+/* ---- Поиск ---- */
+.md-search__form {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--bonsai-border);
+  border-radius: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.md-search__form:hover,
+[data-md-toggle="search"]:checked ~ .md-header .md-search__form {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(124, 58, 237, 0.4);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.12);
+}
+.md-search__input::placeholder { color: rgba(42, 36, 64, 0.5); }
+.md-search-result__link:hover,
+.md-search-result__link[data-md-state="active"] {
+  background: rgba(124, 58, 237, 0.1);
+}
+
+/* ---- Заголовки ---- */
+.md-typeset h1 {
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  background: linear-gradient(95deg, #ffffff 10%, var(--bonsai-mint) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.6em;
+}
+.md-typeset h2 {
+  font-weight: 700;
+  margin-top: 1.6em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--bonsai-border);
+}
+.md-typeset h3 { font-weight: 700; color: #2a2440; }
+.md-typeset h2 .headerlink,
+.md-typeset h3 .headerlink { color: var(--bonsai-emerald-2); }
+
+/* ---- Ссылки ---- */
+.md-typeset a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+.md-typeset a:hover {
+  color: var(--bonsai-emerald);
+  border-bottom-color: rgba(124, 58, 237, 0.5);
+}
+
+/* ---- Таблицы: карточный стиль ---- */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--bonsai-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  background: rgba(255, 255, 255, 0.6);
+}
+.md-typeset table:not([class]) th {
+  background: linear-gradient(180deg, rgba(124, 58, 237, 0.16), rgba(124, 58, 237, 0.06));
+  color: #2a2440;
+  font-weight: 700;
+  border: none;
+  border-bottom: 1px solid var(--bonsai-border);
+}
+.md-typeset table:not([class]) td {
+  border: none;
+  border-bottom: 1px solid rgba(124, 58, 237, 0.07);
+}
+.md-typeset table:not([class]) tr:hover td {
+  background: rgba(124, 58, 237, 0.06);
+}
+.md-typeset table:not([class]) tr:last-child td { border-bottom: none; }
+
+/* ---- Цитаты / blockquote ---- */
+.md-typeset blockquote {
+  border-left: 3px solid var(--bonsai-emerald-2);
+  background: linear-gradient(90deg, rgba(124, 58, 237, 0.08), transparent);
+  border-radius: 0 10px 10px 0;
+  color: rgba(42, 36, 64, 0.88);
+}
+
+/* ---- Код ---- */
+.md-typeset code {
+  border: 1px solid rgba(124, 58, 237, 0.16);
+  border-radius: 6px;
+  padding: 0.1em 0.42em;
+}
+.md-typeset pre > code {
+  border-radius: 12px;
+  border: 1px solid var(--bonsai-border);
+}
+
+/* ---- Боковая навигация ---- */
+.md-nav__title { color: var(--bonsai-mint); font-weight: 700; }
+.md-nav__link {
+  border-radius: 8px;
+  padding: 0.28em 0.6em;
+  transition: background 0.15s, color 0.15s;
+}
+.md-nav__item .md-nav__link--active {
+  color: var(--bonsai-emerald);
+  font-weight: 700;
+  background: rgba(124, 58, 237, 0.1);
+}
+.md-nav__link:hover { color: var(--bonsai-mint); }
+.md-nav__link:focus { background: rgba(124, 58, 237, 0.08); }
+
+/* подсветка активного пункта в TOC */
+.md-nav--secondary .md-nav__link--active { background: transparent; }
+
+/* ---- Admonitions (заметки) ---- */
+.md-typeset .admonition,
+.md-typeset details {
+  border: 1px solid var(--bonsai-border);
+  border-radius: 12px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+/* ---- Кнопки ---- */
+.md-typeset .md-button {
+  border-radius: 10px;
+  font-weight: 700;
+  color: var(--bonsai-mint);
+  border: 1px solid rgba(124, 58, 237, 0.45);
+  background: rgba(124, 58, 237, 0.06);
+  transition: transform 0.15s, box-shadow 0.2s, background 0.2s, color 0.2s;
+}
+.md-typeset .md-button:hover {
+  color: #ffffff;
+  background: var(--bonsai-emerald);
+}
+.md-typeset .md-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px var(--bonsai-glow);
+}
+.md-typeset .md-button--primary,
+.md-typeset .md-button--primary:hover {
+  background: linear-gradient(135deg, var(--bonsai-mint), var(--bonsai-emerald-2));
+  border-color: transparent;
+  color: #ffffff;
+}
+
+/* ---- Подвал ---- */
+.md-footer-meta { background: var(--md-footer-bg-color--dark); }
+
+/* ---- Кастомный скроллбар ---- */
+* { scrollbar-width: thin; scrollbar-color: var(--bonsai-emerald-3) transparent; }
+::-webkit-scrollbar { width: 11px; height: 11px; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--bonsai-emerald-3), var(--bonsai-emerald-2));
+  border-radius: 8px;
+  border: 3px solid var(--bonsai-bg);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--bonsai-emerald); }
+
+/* ---- Изображения ---- */
+.md-typeset img {
+  border-radius: 12px;
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.45);
+}
+
+/* ============================================================
+   Главная страница: hero + карточки
+   ============================================================ */
+.bh-hero {
+  position: relative;
+  margin: -1rem -0.2rem 2.4rem;
+  padding: 3.4rem 2rem 3rem;
+  text-align: center;
+  border-radius: 22px;
+  border: 1px solid var(--bonsai-border);
+  background:
+    radial-gradient(700px 280px at 50% -20%, rgba(124, 58, 237, 0.22), transparent 70%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6));
+  overflow: hidden;
+}
+.bh-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(124, 58, 237, 0.08) 1px, transparent 0);
+  background-size: 22px 22px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+.bh-hero img.bh-hero-logo {
+  width: 92px;
+  height: auto;
+  margin-bottom: 1rem;
+  box-shadow: none;
+  filter: drop-shadow(0 0 22px var(--bonsai-glow));
+}
+.bh-hero h1 {
+  font-size: 2.6rem;
+  margin: 0.2rem 0 0.4rem;
+  border: none;
+}
+.bh-hero p.bh-sub {
+  max-width: 640px;
+  margin: 0 auto 1.4rem;
+  font-size: 0.92rem;
+  color: rgba(42, 36, 64, 0.72);
+}
+.bh-badge {
+  display: inline-block;
+  padding: 0.28rem 0.85rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--bonsai-mint);
+  border: 1px solid var(--bonsai-border);
+  border-radius: 999px;
+  background: rgba(124, 58, 237, 0.08);
+  margin-bottom: 1.2rem;
+}
+
+/* Сетка карточек */
+.bh-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin: 1.4rem 0 2rem;
+}
+.bh-card {
+  display: block;
+  padding: 1.3rem 1.25rem;
+  border-radius: 16px;
+  border: 1px solid var(--bonsai-border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(250, 248, 255, 0.7));
+  color: var(--md-default-fg-color) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid var(--bonsai-border) !important;
+  transition: transform 0.18s ease, border-color 0.18s, box-shadow 0.25s, background 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.bh-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--bonsai-emerald-2), var(--bonsai-mint));
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.bh-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(124, 58, 237, 0.45) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(124, 58, 237, 0.15);
+  background: linear-gradient(180deg, rgba(245, 242, 252, 0.95), rgba(250, 248, 255, 0.8));
+}
+.bh-card:hover::before { opacity: 1; }
+.bh-card .bh-card-icon {
+  font-size: 1.7rem;
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+.bh-card .bh-card-title {
+  display: block;
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: #2a2440;
+  margin-bottom: 0.3rem;
+}
+.bh-card .bh-card-desc {
+  display: block;
+  font-size: 0.8rem;
+  color: rgba(42, 36, 64, 0.62);
+  line-height: 1.5;
+}
+
+/* Шаги быстрого старта */
+.bh-steps { counter-reset: bh; list-style: none; padding: 0; margin: 1rem 0 0; }
+.bh-steps li {
+  position: relative;
+  padding: 0.6rem 0 0.6rem 3rem;
+  margin: 0;
+  border-bottom: 1px solid rgba(124, 58, 237, 0.08);
+}
+.bh-steps li:last-child { border-bottom: none; }
+.bh-steps li::before {
+  counter-increment: bh;
+  content: counter(bh);
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: #ffffff;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--bonsai-emerald), var(--bonsai-emerald-3));
+  box-shadow: 0 4px 14px var(--bonsai-glow);
+}
+
+@media (max-width: 480px) {
+  .bh-hero { padding: 2.4rem 1rem; }
+  .bh-hero h1 { font-size: 1.9rem; }
+}
+
+/* ============================================================
+   Администрация проекта (карточки персонала)
+   ============================================================ */
+.bh-staff-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+  margin: 1.2rem 0 2rem;
+}
+.bh-staff {
+  --role: var(--bonsai-emerald);
+  width: 168px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.9rem 0.6rem 0.7rem;
+  border-radius: 14px;
+  border: 1px solid var(--bonsai-border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(250, 248, 255, 0.7));
+  transition: transform 0.18s ease, border-color 0.18s, box-shadow 0.25s;
+}
+.bh-staff:hover {
+  transform: translateY(-4px);
+  border-color: var(--role);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45), 0 0 0 1px var(--role), 0 0 18px -2px var(--role);
+}
+.bh-staff img.bh-staff-skin {
+  height: 132px;
+  width: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  margin: 0.2rem 0 0.7rem;
+  padding: 0.45rem 0.4rem 0;
+  border-radius: 14px !important;
+  background: linear-gradient(180deg, rgba(124, 58, 237, 0.10), rgba(124, 58, 237, 0.02));
+  box-shadow: inset 0 0 0 1px rgba(124, 58, 237, 0.12) !important;
+  filter: drop-shadow(0 6px 12px rgba(80, 40, 160, 0.22));
+  order: 2;
+}
+.bh-staff-nick {
+  order: 1;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #2a2440;
+  line-height: 1.1;
+  word-break: break-word;
+}
+.bh-staff-name {
+  order: 1;
+  font-size: 0.74rem;
+  color: rgba(42, 36, 64, 0.6);
+  margin-bottom: 0.1rem;
+}
+.bh-staff-role {
+  order: 3;
+  margin-top: auto;
+  padding: 0.16rem 0.7rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 999px;
+  color: var(--role);
+  border: 1px solid color-mix(in srgb, var(--role) 45%, transparent);
+  background: color-mix(in srgb, var(--role) 14%, transparent);
+}
+/* нужен правильный порядок: ник, имя, скин, должность */
+.bh-staff-nick { order: 1; }
+.bh-staff-name { order: 2; }
+.bh-staff-skin { order: 3; }
+.bh-staff-role { order: 4; }
+
+/* Цвета должностей */
+.bh-staff--owner     { --role: #38bdf8; } /* Владелец — голубой */
+.bh-staff--deputy    { --role: #f472b6; } /* Заместитель владельца — розовый */
+.bh-staff--seniortech { --role: #3b82f6; } /* Ст. тех. админ — синий */
+.bh-staff--techadmin { --role: #86efac; } /* Тех. админ — светло-зелёный */
+.bh-staff--admin     { --role: #ef4444; } /* Админ — красный */
+.bh-staff--moderator { --role: #3b82f6; } /* Модератор — синий */
+.bh-staff--helper    { --role: #facc15; } /* Хелпер — жёлтый */
+
+/* Центрирование заголовков на главной */
+.bh-center { text-align: center; }
+
+/* Главная: контент-колонка по центру и ограничена по ширине
+   (иначе на широких экранах всё «уезжает» влево) */
+.bh-home .md-content {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* ============================================================
+   Анимация появления элементов (reveal on scroll)
+   ============================================================ */
+.bh-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+.bh-reveal.bh-in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .bh-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ============================================================
+   Верхняя панель (announce) с соц-пилюлями
+   ============================================================ */
+.md-banner {
+  background: linear-gradient(90deg, #f5f3fb, #151021 50%, #f5f3fb);
+  border-bottom: 1px solid var(--bonsai-border);
+  color: var(--md-default-fg-color);
+}
+.md-banner__inner {
+  margin: 0.35rem auto;
+  font-size: 0.7rem;
+}
+.md-banner__button { display: none; }
+.bh-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.bh-topbar-ip {
+  font-weight: 600;
+  color: rgba(42, 36, 64, 0.85);
+}
+.bh-topbar-ip code {
+  background: rgba(124, 58, 237, 0.12);
+  border: 1px solid var(--bonsai-border);
+  color: var(--bonsai-mint);
+  padding: 0.05rem 0.4rem;
+  border-radius: 6px;
+}
+.bh-topbar-links { display: flex; gap: 0.45rem; flex-wrap: wrap; }
+.bh-pill {
+  display: inline-block;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 999px;
+  color: var(--bonsai-mint) !important;
+  border: 1px solid var(--bonsai-border);
+  background: rgba(124, 58, 237, 0.08);
+  text-decoration: none;
+  transition: transform 0.12s, background 0.18s, color 0.18s, box-shadow 0.18s;
+}
+.bh-pill:hover {
+  transform: translateY(-1px);
+  background: var(--bonsai-emerald);
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px var(--bonsai-glow);
+}
+.bh-pill--discord {
+  color: #c7d2fe !important;
+  border-color: rgba(99, 102, 241, 0.4);
+  background: rgba(99, 102, 241, 0.12);
+}
+.bh-pill--discord:hover { background: #5865f2; color: #fff !important; box-shadow: 0 4px 14px rgba(88,101,242,0.4); }
+.bh-pill--tiktok {
+  color: #f5f5f5 !important;
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+}
+.bh-pill--tiktok:hover { background: #fe2c55; color: #fff !important; box-shadow: 0 4px 14px rgba(254,44,85,0.4); }
+
+@media (max-width: 600px) {
+  .md-banner__inner { font-size: 0.64rem; }
+  .bh-pill { padding: 0.18rem 0.55rem; }
+}
+
+/* ---- GitBook-подобные уточнения ---- */
+.md-main__inner { margin-top: 1.2rem; }
+.md-content__inner { padding-top: 0.6rem; }
+.md-sidebar--primary { padding-top: 0.4rem; }
+.md-typeset .headerlink { opacity: 0; transition: opacity 0.15s; }
+.md-typeset h2:hover .headerlink, .md-typeset h3:hover .headerlink { opacity: 1; }
+
+/* ---- Шапка: логотип + название «BONSAI HOUSE · 3 СЕЗОН» ---- */
+.md-header__title {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+}
+/* Показывать логотип в шапке на всех экранах */
+.md-header__button.md-logo {
+  display: inline-flex !important;
+  align-items: center;
+  padding: 0.2rem 0.2rem 0.2rem 0;
+  margin-right: 0.1rem;
+}
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 1.7rem;
+  width: auto;
+  filter: drop-shadow(0 0 6px var(--bonsai-glow));
+}
+
+/* ============================================================
+   Боковое меню в стиле GitBook (группы-заголовки + иконки)
+   ============================================================ */
+/* Заголовок «BONSAI HOUSE» над меню (в мобильном drawer — сплошной фон,
+   чтобы пункты не просвечивали сквозь него при прокрутке) */
+.md-nav--primary > .md-nav__title {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 800;
+  color: var(--bonsai-mint);
+  background: var(--bonsai-bg-2);
+  border-bottom: 1px solid var(--bonsai-border);
+}
+
+/* GitBook-стиль бокового меню применяем ТОЛЬКО на десктопе (постоянный сайдбар).
+   На мобильном (выдвижной drawer) оставляем стандартное поведение Material,
+   иначе разделы-группы перестают раскрываться. */
+@media screen and (min-width: 76.25em) {
+  /* Группы верхнего уровня = заголовки разделов */
+  .md-nav--primary .md-nav__item--section {
+    margin-top: 1.1rem;
+  }
+  .md-nav--primary .md-nav__item--section > .md-nav__link {
+    font-size: 0.72rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    font-weight: 800;
+    color: var(--md-default-fg-color--light) !important;
+    opacity: 0.75;
+    cursor: default;
+    pointer-events: none;
+    margin-bottom: 0.2rem;
+  }
+
+  /* Пункты меню */
+  .md-nav--primary .md-nav__link {
+    border-radius: 8px;
+    padding: 0.36rem 0.6rem;
+    margin: 0.08rem 0;
+    font-size: 0.78rem;
+    transition: background 0.15s, color 0.15s, padding 0.15s;
+  }
+  .md-nav--primary .md-nav__item .md-nav__link:hover {
+    background: rgba(124, 58, 237, 0.09);
+    color: var(--bonsai-mint);
+  }
+  /* Активный пункт — зелёная подсветка с полоской слева (как GitBook) */
+  .md-nav--primary .md-nav__link--active,
+  .md-nav--primary .md-nav__item .md-nav__link--active {
+    background: rgba(124, 58, 237, 0.14);
+    color: var(--bonsai-mint) !important;
+    font-weight: 700;
+    box-shadow: inset 3px 0 0 var(--bonsai-emerald);
+  }
+
+  /* Скрыть стрелки-«шевроны» (на десктопе меню всегда раскрыто) */
+  .md-nav--primary .md-nav__item--section > .md-nav__link .md-nav__icon,
+  .md-nav--primary .md-nav__icon { display: none; }
+}
+
+/* ============================================================
+   Круглый логотип в шапке
+   ============================================================ */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   Заголовок hero — Small Caps
+   ============================================================ */
+.bh-hero h1 {
+  font-size: 3.5rem;
+  letter-spacing: 0;
+  text-align: center;
+}
+/* скрыть пилкроу-ссылку у заголовка hero — она занимала место справа
+   и визуально уводила текст влево */
+.bh-hero h1 .headerlink { display: none !important; }
+
+/* ============================================================
+   Соц-иконки в верхней панели (кликабельные картинки)
+   ============================================================ */
+.bh-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--bonsai-mint);
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+.bh-social svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: currentColor;
+}
+.bh-social:hover { transform: translateY(-1px) scale(1.15); }
+.bh-social[title="Discord"]:hover { color: #8b9cff; }
+.bh-social[title="TikTok"]:hover { color: #ffffff; }
+
+/* ============================================================
+   Анимация администрации — вылет слева направо
+   ============================================================ */
+.bh-reveal.bh-staff { transform: translateX(-48px); }
+.bh-reveal.bh-staff.bh-in { transform: none; }
+
+/* ============================================================
+   Профили игроков (карточка + вход)
+   ============================================================ */
+.ax-profile {
+  display: grid;
+  grid-template-columns: minmax(190px, 230px) 1fr;
+  gap: 1.2rem;
+}
+.ax-profile__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ax-profile__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.6px;
+  color: var(--md-default-fg-color--lighter);
+}
+.ax-profile__nick {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #2a2440;
+  word-break: break-word;
+  margin: 0.1rem 0 0.5rem;
+}
+.ax-profile__joined {
+  display: inline-block;
+  padding: 0.22rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 999px;
+  color: var(--bonsai-emerald);
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  background: rgba(124, 58, 237, 0.12);
+}
+.ax-profile img.ax-profile__skin {
+  height: 200px;
+  width: 100%;
+  max-width: 220px;
+  object-fit: contain;
+  object-position: center bottom;
+  align-self: center;
+  margin: 0.9rem 0 0.8rem;
+  padding: 0.6rem 0.5rem 0;
+  border-radius: 18px !important;
+  background: linear-gradient(180deg, rgba(124, 58, 237, 0.10), rgba(124, 58, 237, 0.02));
+  box-shadow: inset 0 0 0 1px rgba(124, 58, 237, 0.12) !important;
+  filter: drop-shadow(0 10px 18px rgba(80, 40, 160, 0.20));
+}
+.ax-profile__birth {
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+  margin-top: auto;
+}
+.ax-profile__right {
+  display: flex;
+  flex-direction: column;
+}
+.ax-profile__section {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2a2440;
+  margin-bottom: 0.9rem;
+}
+.ax-profile__empty {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  min-height: 170px;
+  padding: 1.4rem 1rem;
+  text-align: center;
+  border-radius: 16px;
+  border: 1px dashed rgba(124, 58, 237, 0.28);
+  background: rgba(124, 58, 237, 0.05);
+  color: var(--md-default-fg-color--light);
+}
+@media (max-width: 700px) {
+  .ax-profile { grid-template-columns: 1fr; }
+  .ax-profile__birth { margin-top: 0.6rem; }
+}
+
+/* Форма входа */
+.ax-login { max-width: 420px; }
+.ax-login__hint { color: var(--md-default-fg-color--light); }
+.ax-login__input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  margin: 0.6rem 0 0.9rem;
+  font-size: 0.9rem;
+  color: var(--md-default-fg-color);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--bonsai-border);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.ax-login__input:focus {
+  border-color: rgba(124, 58, 237, 0.5);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+.ax-login__err { min-height: 1.2em; margin-top: 0.7rem; color: #ff8a8a; font-size: 0.82rem; }
+
+/* ---- Модальное окно профиля ---- */
+.ax-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 1.2rem;
+}
+.ax-modal[hidden] { display: none; }
+.ax-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(40, 32, 60, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.ax-modal.is-open .ax-modal__backdrop { opacity: 1; }
+.ax-modal__card {
+  position: relative;
+  width: min(720px, 100%);
+  overflow: hidden;
+  padding: 1.3rem 1.4rem;
+  border-radius: 20px;
+  border: 1px solid var(--bonsai-border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(250, 248, 255, 0.98));
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(124, 58, 237, 0.12);
+  opacity: 0;
+  transform: translateY(18px) scale(0.96);
+  transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.ax-modal.is-open .ax-modal__card {
+  opacity: 1;
+  transform: none;
+}
+.ax-modal__close {
+  position: absolute;
+  top: 0.9rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--md-default-fg-color--light);
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+.ax-modal__close:hover {
+  color: var(--bonsai-emerald);
+  background: rgba(124, 58, 237, 0.12);
+}
+@media (prefers-reduced-motion: reduce) {
+  .ax-modal__backdrop, .ax-modal__card { transition: none; }
+}
+
+/* ---- Достижения в профиле ---- */
+.ax-ach-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(108px, 120px));
+  gap: 0.7rem;
+  align-content: start;
+  min-height: 170px;
+}
+.ax-ach {
+  position: relative;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  padding: 3px;
+  border-radius: 14px;
+  border: 1px solid var(--bonsai-border);
+  background: rgba(124, 58, 237, 0.06);
+  cursor: default;
+  transition: transform 0.15s, border-color 0.15s, box-shadow 0.2s;
+}
+.ax-ach:hover {
+  transform: translateY(-3px);
+  border-color: rgba(124, 58, 237, 0.55);
+  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.22);
+}
+.ax-ach img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.ax-ach__name {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  width: max-content;
+  max-width: 190px;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.72rem;
+  line-height: 1.3;
+  text-align: center;
+  color: #2a2440;
+  background: #ffffff;
+  border: 1px solid var(--bonsai-border);
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s, transform 0.15s;
+  z-index: 5;
+}
+.ax-ach:hover .ax-ach__name {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ============================================================
+   МИНИМАЛИЗМ — чистый облегчённый вид (тёмно-фиолетовый)
+   ============================================================ */
+:root { --bonsai-glow: rgba(124, 58, 237, 0.16); }
+[data-md-color-scheme="default"] { --bonsai-border: rgba(124, 58, 237, 0.10); }
+
+/* мягче общий фон */
+body {
+  background-image:
+    radial-gradient(1000px 480px at 82% -12%, rgba(124, 58, 237, 0.09), transparent 62%),
+    radial-gradient(820px 440px at 4% 2%, rgba(124, 58, 237, 0.06), transparent 58%);
+}
+
+/* Hero: без пиксельного паттерна, плоский, лёгкий */
+.bh-hero::after { display: none; }
+.bh-hero {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(250, 248, 255, 0.3));
+  border: 1px solid var(--bonsai-border);
+  box-shadow: none;
+}
+.bh-hero h1 {
+  background: none !important;
+  -webkit-text-fill-color: currentColor !important;
+  color: #2a2440;
+}
+.bh-hero-logo { filter: none; }
+.bh-badge { background: rgba(124, 58, 237, 0.08); }
+
+/* Карточки — плоские, тонкая рамка, спокойный ховер */
+.bh-card,
+.bh-staff,
+.ax-modal__card,
+.ax-profile__empty,
+.ax-ach {
+  background: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: none !important;
+}
+.bh-card::before { display: none; }
+.bh-card:hover,
+.bh-staff:hover,
+.ax-ach:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.32) !important;
+}
+.ax-modal__card { box-shadow: 0 22px 55px rgba(0, 0, 0, 0.5) !important; }
+
+/* Кнопки — плоские, без неонового свечения */
+.md-typeset .md-button {
+  border-color: var(--bonsai-border);
+}
+.md-typeset .md-button:hover {
+  transform: translateY(-1px);
+  box-shadow: none;
+}
+.md-typeset .md-button--primary,
+.md-typeset .md-button--primary:hover {
+  background: var(--bonsai-emerald-2);
+}
+
+/* Таблицы / заметки — легче */
+.md-typeset table:not([class]) {
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.5);
+}
+.md-typeset .admonition,
+.md-typeset details {
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+/* Верхняя панель / поиск — тише */
+.bh-social:hover { transform: none; }
+
+/* ============================================================
+   СВЕТЛАЯ ТЕМА — доводка (минимализм)
+   ============================================================ */
+/* заголовки контента — тёмный→фиолетовый градиент (белый был невидим) */
+.md-typeset h1 {
+  background: linear-gradient(95deg, #2a2440 10%, #7c3aed 95%);
+}
+/* мягкие тени вместо чёрных */
+.md-header { box-shadow: 0 1px 0 var(--bonsai-border) !important; }
+.md-header--shadow { box-shadow: 0 6px 20px rgba(124, 58, 237, 0.10) !important; }
+
+/* карточки — чистый белый + мягкая фиолетовая тень */
+.bh-card,
+.bh-staff,
+.ax-modal__card,
+.ax-ach,
+.md-typeset table:not([class]),
+.md-typeset .admonition,
+.md-typeset details {
+  background: #ffffff !important;
+}
+.bh-card, .bh-staff, .ax-ach {
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.07) !important;
+}
+.bh-card:hover, .bh-staff:hover, .ax-ach:hover {
+  box-shadow: 0 12px 26px rgba(124, 58, 237, 0.14) !important;
+}
+.ax-modal__card { box-shadow: 0 24px 60px rgba(42, 36, 64, 0.28) !important; }
+.ax-profile__empty { background: #faf8ff !important; }
+.md-typeset table:not([class]),
+.md-typeset .admonition,
+.md-typeset details { box-shadow: 0 6px 18px rgba(124, 58, 237, 0.06) !important; }
+
+/* hero — светлый, мягкий */
+.bh-hero {
+  background: linear-gradient(180deg, #ffffff, #faf8ff) !important;
+  border: 1px solid var(--bonsai-border);
+}
+.bh-hero h1 { color: #2a2440 !important; }
+.bh-hero-logo { filter: none; }
+.md-header__button.md-logo img { filter: none; }
+
+/* верхняя панель — светлая */
+.md-banner { background: #f0eafa; }
+.bh-topbar-ip { color: #4a3f6e; }
+.bh-topbar-ip code { color: #6d28d9; background: rgba(124, 58, 237, 0.10); }
+
+/* кнопка «Профиль» в шапке */
+.bh-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.18rem 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 999px;
+  color: #6d28d9;
+  border: 1px solid var(--bonsai-border);
+  background: rgba(124, 58, 237, 0.08);
+  transition: background 0.15s, color 0.15s, transform 0.15s;
+}
+.bh-pill:hover { background: #7c3aed; color: #ffffff; transform: translateY(-1px); }
+
+/* модалка: мягче затемнение на светлом фоне */
+.ax-modal__backdrop { background: rgba(42, 36, 64, 0.5); }
+
+/* соц-иконки в шапке — фиолетовые */
+.bh-social { color: #7c3aed; }
