@@ -1,7 +1,7 @@
 site_name: Axied Project
 site_description: Википедия сервера Axied — механики, крафты, зачарования и особенности.
 site_author: Axied Project
-site_url: https://wiki.axied.ru/
+site_url: https://jukirs.github.com/
 
 docs_dir: docs
 not_in_nav: |
